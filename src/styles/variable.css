@@ -1,0 +1,300 @@
+:root {
+
+  /* ======================================================
+     1. BRAND COLORS
+     ====================================================== */
+
+  /* Main school maroon / burgundy */
+  --color-primary: #8F0B1D;
+  --color-primary-dark: #6F0716;
+  --color-primary-light: #A91B31;
+
+  /* Warm Indian-gold accent */
+  --color-secondary: #C58A3A;
+  --color-secondary-dark: #A96F24;
+  --color-secondary-light: #D9A85C;
+
+  /* Gold used for decorative lines/highlights */
+  --color-gold: #C58A3A;
+  --color-gold-light: #E4C38D;
+
+  /* ======================================================
+     2. BACKGROUND COLORS
+     ====================================================== */
+
+  --color-background: #FBF8F2;
+  --color-background-white: #FFFFFF;
+  --color-background-cream: #F8F0E4;
+  --color-background-warm: #F4E5D0;
+
+  /* Soft section/card backgrounds */
+  --color-surface: #FFFDF9;
+  --color-surface-muted: #F7F1E8;
+
+  /* ======================================================
+     3. TEXT COLORS
+     ====================================================== */
+
+  --color-text-primary: #25252A;
+  --color-text-secondary: #5E6470;
+  --color-text-muted: #7A7A7A;
+  --color-text-white: #FFFFFF;
+
+  /* Heading color seen throughout the design */
+  --color-heading: #7F0A1A;
+
+  /* Gold/brown text used for labels and decorative text */
+  --color-text-gold: #A96F24;
+
+  /* ======================================================
+     4. BORDER COLORS
+     ====================================================== */
+
+  --color-border: #E7D9C5;
+  --color-border-light: #F0E6D7;
+  --color-border-gold: #D6A65D;
+  --color-border-primary: #A91B31;
+
+  /* ======================================================
+     5. SOFT ACCENT COLORS
+
+     Useful for cards such as the Panchapadi section.
+     ====================================================== */
+
+  --color-soft-red: #FBE7E9;
+  --color-soft-blue: #EAF2FC;
+  --color-soft-green: #EAF5EC;
+  --color-soft-purple: #F0E9FA;
+  --color-soft-yellow: #FBF1DA;
+
+  /* ======================================================
+     6. TYPOGRAPHY
+     ====================================================== */
+
+  /*
+   * The designs use a traditional/high-contrast serif
+   * style for major headings and a clean sans-serif style
+   * for body text.
+   *
+   * Replace these font names if your project already has
+   * specific fonts supplied by the designer.
+   */
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+
+  /* Font sizes */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-md: 1rem;         /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 2rem;        /* 32px */
+  --font-size-4xl: 2.5rem;      /* 40px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-tight: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-wider: 0.15em;
+
+  /* ======================================================
+     7. SPACING SYSTEM
+     ====================================================== */
+
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* Common page/section spacing */
+  --section-padding-y: 5rem;
+  --section-padding-y-mobile: 3.5rem;
+
+  /* ======================================================
+     8. LAYOUT
+     ====================================================== */
+
+  --container-max-width: 1280px;
+  --container-padding: 4rem;
+  --container-padding-tablet: 2rem;
+  --container-padding-mobile: 1.25rem;
+
+  /* Common column gaps */
+  --content-gap-sm: 1rem;
+  --content-gap-md: 1.5rem;
+  --content-gap-lg: 2rem;
+  --content-gap-xl: 3rem;
+
+  /* ======================================================
+     9. BORDER RADIUS
+     ====================================================== */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* ======================================================
+     10. SHADOWS
+     ====================================================== */
+
+  --shadow-sm: 0 2px 8px rgba(60, 35, 15, 0.08);
+  --shadow-md: 0 6px 20px rgba(60, 35, 15, 0.10);
+  --shadow-lg: 0 12px 32px rgba(60, 35, 15, 0.14);
+
+  /* ======================================================
+     11. BUTTONS
+     ====================================================== */
+
+  --button-height: 50px;
+  --button-height-sm: 42px;
+  --button-height-lg: 56px;
+
+  --button-padding-x: 1.5rem;
+  --button-padding-x-lg: 2rem;
+
+  --button-radius: var(--radius-md);
+  --button-font-size: var(--font-size-md);
+  --button-font-weight: var(--font-weight-medium);
+
+  /* Primary button */
+  --button-primary-bg: var(--color-primary);
+  --button-primary-text: var(--color-text-white);
+  --button-primary-hover: var(--color-primary-dark);
+
+  /* Secondary/outline button */
+  --button-secondary-bg: transparent;
+  --button-secondary-text: var(--color-primary);
+  --button-secondary-border: var(--color-primary);
+  --button-secondary-hover-bg: var(--color-primary);
+  --button-secondary-hover-text: var(--color-text-white);
+
+  /* ======================================================
+     12. CARDS
+     ====================================================== */
+
+  --card-background: var(--color-surface);
+  --card-border: var(--color-border-light);
+  --card-radius: var(--radius-lg);
+  --card-padding: var(--space-6);
+  --card-shadow: var(--shadow-sm);
+
+  /* ======================================================
+     13. NAVBAR
+     ====================================================== */
+
+  --navbar-height: 88px;
+  --navbar-background: rgba(255, 255, 255, 0.96);
+  --navbar-text: #374151;
+  --navbar-text-hover: var(--color-primary);
+  --navbar-text-active: var(--color-primary);
+  --navbar-border: var(--color-border-light);
+
+  --navbar-item-gap: 2rem;
+
+  /* Active navigation underline */
+  --navbar-active-line-height: 3px;
+  --navbar-active-line-width: 38px;
+
+  /* ======================================================
+     14. FORM ELEMENTS
+     ====================================================== */
+
+  --input-height: 48px;
+  --input-padding-x: 1rem;
+  --input-radius: var(--radius-md);
+  --input-background: var(--color-background-white);
+  --input-border: var(--color-border);
+  --input-border-focus: var(--color-primary);
+  --input-text: var(--color-text-primary);
+  --input-placeholder: var(--color-text-muted);
+
+  /* ======================================================
+     15. IMAGES
+     ====================================================== */
+
+  --image-radius: var(--radius-lg);
+  --image-radius-lg: var(--radius-xl);
+
+  /* ======================================================
+     16. TRANSITIONS
+     ====================================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ======================================================
+     17. Z-INDEX
+     ====================================================== */
+
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-navbar: 1000;
+  --z-modal: 2000;
+
+  /* ======================================================
+     18. RESPONSIVE BREAKPOINT REFERENCE
+
+     IMPORTANT:
+     CSS custom properties cannot be used directly inside
+     media-query conditions in normal CSS. Keep these here
+     as a central reference, but use the pixel values in
+     @media rules.
+     ====================================================== */
+
+  --breakpoint-mobile: 576px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1280px;
+  --breakpoint-large: 1440px;
+}
+
+
+/*
+==========================================================
+QUICK TEAM USAGE
+
+Instead of:
+
+  color: #8F0B1D;
+  padding: 24px;
+  border-radius: 16px;
+
+Use:
+
+  color: var(--color-primary);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+
+This keeps all pages consistent.
+==========================================================
+*/
