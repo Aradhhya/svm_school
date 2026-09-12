@@ -279,22 +279,4 @@
 }
 
 
-/*
-==========================================================
-QUICK TEAM USAGE
 
-Instead of:
-
-  color: #8F0B1D;
-  padding: 24px;
-  border-radius: 16px;
-
-Use:
-
-  color: var(--color-primary);
-  padding: var(--space-6);
-  border-radius: var(--radius-lg);
-
-This keeps all pages consistent.
-==========================================================
-*/

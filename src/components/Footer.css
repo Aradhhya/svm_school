@@ -1,0 +1,350 @@
+/* ======================================================
+   SVM SCHOOL FOOTER STYLES
+   ====================================================== */
+
+.svm-footer {
+  background-color: #58050F;
+  color: #F8F0E4;
+  padding-top: var(--space-16, 4rem);
+  padding-bottom: var(--space-10, 2.5rem);
+  border-top: 2px solid var(--color-gold-light, #E4C38D);
+  position: relative;
+  overflow: hidden;
+}
+
+.svm-footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======================================================
+   4-COLUMN GRID
+   ====================================================== */
+
+.svm-footer-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.75fr 1.25fr 1.15fr;
+  gap: var(--space-8, 2rem);
+  align-items: start;
+  padding-bottom: var(--space-12, 3rem);
+}
+
+.svm-footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vertical dividers on desktop */
+.svm-footer-links-col {
+  padding-left: var(--space-6, 1.5rem);
+  border-left: 1px solid rgba(228, 195, 141, 0.16);
+}
+
+.svm-footer-contact-col {
+  padding-left: var(--space-6, 1.5rem);
+  border-left: 1px solid rgba(228, 195, 141, 0.16);
+}
+
+.svm-footer-curriculum-col {
+  padding-left: var(--space-4, 1rem);
+}
+
+/* ======================================================
+   COLUMN 1: BRAND
+   ====================================================== */
+
+.svm-footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4, 1rem);
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.svm-footer-logo-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full, 9999px);
+  overflow: hidden;
+  border: 2px solid var(--color-gold, #C58A3A);
+  background-color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.svm-footer-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.svm-footer-brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-footer-hindi-name {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.svm-footer-eng-name {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #F8F0E4;
+  line-height: 1.25;
+  margin: 2px 0 0 0;
+}
+
+.svm-footer-location {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.75rem;
+  color: #E4C38D;
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+.svm-footer-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #E6DFD5;
+  margin-bottom: var(--space-4, 1rem);
+  max-width: 95%;
+}
+
+.svm-footer-motto {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #F5B041;
+  margin-bottom: var(--space-4, 1rem);
+  letter-spacing: 0.04em;
+}
+
+.svm-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+}
+
+.svm-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(228, 195, 141, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all var(--transition-fast, 150ms ease);
+}
+
+.svm-social-btn:hover {
+  background-color: #F5B041;
+  border-color: #F5B041;
+  color: #58050F;
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   COLUMN HEADINGS & LISTS
+   ====================================================== */
+
+.svm-footer-heading {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: #F5B041;
+  margin-bottom: var(--space-5, 1.25rem);
+  letter-spacing: 0.02em;
+}
+
+.svm-footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.svm-footer-list a {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.92rem;
+  color: #E6DFD5;
+  text-decoration: none;
+  transition: all var(--transition-fast, 150ms ease);
+}
+
+.svm-footer-list a:hover {
+  color: #F5B041;
+  transform: translateX(4px);
+}
+
+/* ======================================================
+   COLUMN 3: REACH US
+   ====================================================== */
+
+.svm-footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4, 1rem);
+}
+
+.svm-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3, 0.75rem);
+}
+
+.svm-contact-icon {
+  color: #F5B041;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.svm-contact-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #E6DFD5;
+}
+
+/* ======================================================
+   COLUMN 4: CURRICULUM & CTA
+   ====================================================== */
+
+.svm-curriculum-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #E6DFD5;
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+.svm-footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2, 0.5rem);
+  background-color: #F5B041;
+  color: #380309;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: var(--radius-full, 9999px);
+  text-decoration: none;
+  transition: all var(--transition-normal, 250ms ease);
+  box-shadow: 0 4px 16px rgba(245, 176, 65, 0.25);
+  width: fit-content;
+}
+
+.svm-footer-cta-btn:hover {
+  background-color: #F8C471;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 176, 65, 0.35);
+}
+
+.svm-cta-arrow {
+  font-size: 1.15rem;
+  transition: transform var(--transition-fast, 150ms ease);
+}
+
+.svm-footer-cta-btn:hover .svm-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ======================================================
+   BOTTOM DECORATIVE SLOGAN & LOTUS MOTIF
+   ====================================================== */
+
+.svm-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-8, 2rem);
+  margin-top: var(--space-4, 1rem);
+  border-top: 1px solid rgba(228, 195, 141, 0.12);
+  gap: var(--space-8, 2rem);
+}
+
+.svm-footer-slogan {
+  flex-shrink: 0;
+}
+
+.svm-slogan-line1,
+.svm-slogan-line2 {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.12rem;
+  font-style: italic;
+  color: #E4C38D;
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.svm-footer-divider-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4, 1rem);
+  flex-grow: 1;
+}
+
+.svm-footer-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(228, 195, 141, 0.1), rgba(228, 195, 141, 0.65), rgba(228, 195, 141, 0.1));
+}
+
+.svm-lotus-motif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F5B041;
+  flex-shrink: 0;
+}
+
+/* ======================================================
+   RESPONSIVE BREAKPOINTS
+   ====================================================== */
+
+@media (max-width: 1024px) {
+  .svm-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8, 2rem);
+  }
+
+  .svm-footer-links-col,
+  .svm-footer-contact-col,
+  .svm-footer-curriculum-col {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .svm-footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8, 2rem);
+  }
+
+  .svm-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-6, 1.5rem);
+  }
+
+  .svm-footer-divider-group {
+    width: 100%;
+  }
+}

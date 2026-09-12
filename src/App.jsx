@@ -1,11 +1,80 @@
+import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/home/HomePage';
+import About from './pages/about/About';
+import AcademicsPage from './pages/academics/AcademicsPage';
+import FacilitiesPage from './pages/facilities/FacilitiesPage';
+import GalleryPage from './pages/gallery/GalleryPage';
+import AdmissionPage from './pages/admission/AdmissionPage';
+import ContactPage from './pages/contact/ContactPage';
+import './App.css';
 
+const VALID_PAGES = ['home', 'about', 'academics', 'facilities', 'gallery', 'admission', 'contact'];
 
-const App = () => {
+const getInitialPage = () => {
+  if (typeof window !== 'undefined') {
+    const hash = window.location.hash.replace('#', '').toLowerCase();
+    if (VALID_PAGES.includes(hash)) {
+      return hash;
+    }
+  }
+  return 'home';
+};
+
+function App() {
+  const [activePage, setActivePage] = useState(getInitialPage);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const currentHash = window.location.hash.replace('#', '').toLowerCase();
+      if (VALID_PAGES.includes(currentHash)) {
+        setActivePage(currentHash);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const handleNavigate = (pageId) => {
+    setActivePage(pageId);
+    window.location.hash = pageId;
+  };
+
+  const renderPage = () => {
+    switch (activePage.toLowerCase()) {
+      case 'home':
+        return <HomePage />;
+      case 'about':
+        return <About />;
+      case 'academics':
+        return <AcademicsPage />;
+      case 'facilities':
+        return <FacilitiesPage />;
+      case 'gallery':
+        return <GalleryPage />;
+      case 'admission':
+        return <AdmissionPage />;
+      case 'contact':
+        return <ContactPage />;
+      default:
+        return <HomePage />;
+    }
+  };
+
   return (
-    <div>
-      <h1>hi there</h1>
+    <div className="svm-app">
+      {/* Global Persistent Header across all pages */}
+      <Header activePage={activePage} onNavigate={handleNavigate} />
+      
+      {/* Active Page View */}
+      {renderPage()}
+
+      {/* Global Persistent Footer across all pages */}
+      <Footer onNavigate={handleNavigate} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,339 @@
+/* ======================================================
+   SVM SCHOOL HEADER & NAVBAR STYLES
+   ====================================================== */
+
+.svm-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-navbar, 1000);
+  background-color: var(--navbar-background, rgba(255, 255, 255, 0.96));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--navbar-border, var(--color-border-light));
+  transition: all var(--transition-normal);
+}
+
+.svm-header.scrolled {
+  box-shadow: 0 4px 20px rgba(60, 35, 15, 0.07);
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+.svm-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--navbar-height, 88px);
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+/* ======================================================
+   BRAND / LOGO SECTION
+   ====================================================== */
+
+.svm-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.svm-logo-wrapper {
+  width: 66px;
+  height: 66px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(143, 11, 29, 0.15);
+  border: 2px solid var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-white);
+  transition: transform var(--transition-normal);
+}
+
+.svm-brand:hover .svm-logo-wrapper {
+  transform: scale(1.03);
+  border-color: var(--color-gold);
+}
+
+.svm-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.svm-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.svm-school-name {
+  font-family: var(--font-heading);
+  font-size: 1.38rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.svm-location-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.svm-location-text {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.09em;
+  color: var(--color-text-gold);
+  text-transform: uppercase;
+}
+
+.svm-dash {
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.svm-tagline {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--color-primary-light);
+  line-height: 1.2;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ======================================================
+   NAVBAR (DESKTOP)
+   ====================================================== */
+
+.svm-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.svm-nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--navbar-item-gap, 1.85rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.svm-nav-item {
+  position: relative;
+}
+
+.svm-nav-link {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--navbar-text);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  transition: color var(--transition-fast);
+}
+
+.svm-nav-link:hover {
+  color: var(--color-primary);
+}
+
+.svm-nav-link.active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Active Indicator Line */
+.svm-active-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--navbar-active-line-width, 36px);
+  height: var(--navbar-active-line-height, 3px);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+  transition: width var(--transition-normal);
+}
+
+/* ======================================================
+   MOBILE TOGGLE & DRAWER
+   ====================================================== */
+
+.svm-mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.svm-mobile-toggle:hover {
+  background-color: var(--color-background-cream);
+  border-color: var(--color-gold);
+}
+
+.svm-hamburger-bar {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.svm-mobile-toggle.open .svm-hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.svm-mobile-toggle.open .svm-hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.svm-mobile-toggle.open .svm-hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.svm-mobile-drawer {
+  display: none;
+  overflow: hidden;
+  background-color: var(--color-background-white);
+  border-top: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.svm-mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-6);
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+}
+
+.svm-mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.svm-mobile-nav-link:hover {
+  background-color: var(--color-background-cream);
+  color: var(--color-primary);
+}
+
+.svm-mobile-nav-link.active {
+  background-color: var(--color-soft-red);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.svm-mobile-active-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+}
+
+/* ======================================================
+   RESPONSIVE BREAKPOINTS
+   ====================================================== */
+
+@media (max-width: 1024px) {
+  .svm-nav-list {
+    gap: 1.25rem;
+  }
+  
+  .svm-nav-link {
+    font-size: 0.9rem;
+  }
+
+  .svm-school-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .svm-navbar {
+    display: none;
+  }
+
+  .svm-mobile-toggle {
+    display: flex;
+  }
+
+  .svm-mobile-drawer.open {
+    display: block;
+    animation: svmSlideDown 250ms ease forwards;
+  }
+}
+
+@keyframes svmSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .svm-header-container {
+    min-height: 74px;
+  }
+
+  .svm-logo-wrapper {
+    width: 52px;
+    height: 52px;
+  }
+
+  .svm-school-name {
+    font-size: 1.05rem;
+  }
+
+  .svm-location-text {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+
+  .svm-tagline {
+    font-size: 0.68rem;
+  }
+}

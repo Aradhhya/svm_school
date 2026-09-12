@@ -1,0 +1,367 @@
+/* ======================================================
+   SVM SCHOOL HOME PAGE HERO STYLES (PIXEL-PERFECT ALIGNMENT)
+   ====================================================== */
+
+.svm-home-page {
+  background-color: var(--color-background, #FBF8F2);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.svm-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-color: #FBF8F2;
+  background-image: url('../../assets/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-6, 1.5rem);
+  padding-bottom: var(--space-8, 2rem);
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+}
+
+/* Floating Calligraphy Quote in the Sky */
+.svm-hero-sky-quote {
+  position: absolute;
+  top: 24px;
+  right: 6%;
+  text-align: right;
+  z-index: 2;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.svm-sky-quote-line1,
+.svm-sky-quote-line2 {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin: 0;
+  line-height: 1.25;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.95);
+}
+
+.svm-sky-quote-line2 {
+  color: var(--color-primary, #8F0B1D);
+}
+
+.svm-hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+/* ======================================================
+   LEFT COLUMN: CONTENT & TYPOGRAPHY
+   ====================================================== */
+
+.svm-hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  padding: var(--space-2, 0.5rem) 0;
+}
+
+/* Shloka & Eyebrow */
+.svm-hero-shloka-wrap {
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+.svm-hero-shloka {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--color-text-gold, #A96F24);
+  line-height: 1.3;
+  margin: 0 0 2px 0;
+  letter-spacing: 0.02em;
+}
+
+.svm-hero-eyebrow {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-text-gold, #A96F24);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Main Headline */
+.svm-hero-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--space-4, 1rem) 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-title-black {
+  color: #1F1F24;
+}
+
+.svm-title-maroon {
+  color: var(--color-primary, #8F0B1D);
+}
+
+.svm-title-relative {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.svm-title-curve {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  max-width: 245px;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Description */
+.svm-hero-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.58;
+  color: #374151;
+  margin: 0 0 var(--space-5, 1.25rem) 0;
+  max-width: 420px;
+  font-weight: 450;
+}
+
+/* CTA Button */
+.svm-hero-cta-wrap {
+  margin-bottom: var(--space-5, 1.25rem);
+}
+
+.svm-hero-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2, 0.5rem);
+  background-color: var(--color-primary, #8F0B1D);
+  color: #FFFFFF;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: var(--radius-md, 10px);
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(143, 11, 29, 0.25);
+  transition: all var(--transition-normal, 250ms ease);
+}
+
+.svm-hero-primary-btn:hover {
+  background-color: var(--color-primary-dark, #6F0716);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(143, 11, 29, 0.35);
+}
+
+.svm-btn-arrow {
+  font-size: 1.1rem;
+  transition: transform var(--transition-fast, 150ms ease);
+}
+
+.svm-hero-primary-btn:hover .svm-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ======================================================
+   3 PILLARS / HIGHLIGHTS
+   ====================================================== */
+
+.svm-hero-highlights {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4, 1rem);
+  padding: var(--space-3, 0.75rem) 0;
+  margin-bottom: var(--space-2, 0.5rem);
+  border-top: 1px solid rgba(231, 217, 197, 0.8);
+  max-width: 440px;
+}
+
+.svm-highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  flex: 1;
+}
+
+.svm-highlight-icon {
+  color: var(--color-secondary, #C58A3A);
+  display: flex;
+  align-items: center;
+}
+
+.svm-highlight-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-highlight-main {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-primary, #8F0B1D);
+  line-height: 1.15;
+}
+
+.svm-highlight-sub {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.7rem;
+  color: var(--color-text-secondary, #5E6470);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+.svm-highlight-divider {
+  width: 1px;
+  height: 36px;
+  background-color: var(--color-border, #E7D9C5);
+  flex-shrink: 0;
+}
+
+/* ======================================================
+   BOTTOM MOTTO LINE
+   ====================================================== */
+
+.svm-hero-bottom-motto {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  max-width: 420px;
+  margin-top: var(--space-2, 0.5rem);
+}
+
+.svm-motto-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold, #C58A3A), transparent);
+}
+
+.svm-motto-text {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--color-text-gold, #A96F24);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ======================================================
+   RESPONSIVE BREAKPOINTS
+   ====================================================== */
+
+@media (min-width: 1600px) {
+  .svm-hero-section {
+    background-size: 1150px auto;
+    min-height: 640px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .svm-hero-section {
+    background-size: auto 95%;
+  }
+
+  .svm-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .svm-hero-content {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .svm-hero-section {
+    background-position: right 25% top;
+    background-size: cover;
+    min-height: 580px;
+  }
+
+  .svm-hero-content {
+    max-width: 440px;
+    background: rgba(251, 248, 242, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: var(--space-5, 1.25rem);
+    border-radius: var(--radius-xl, 24px);
+    border: 1px solid rgba(228, 195, 141, 0.4);
+    box-shadow: 0 8px 32px rgba(60, 35, 15, 0.06);
+  }
+
+  .svm-hero-title {
+    font-size: 2.35rem;
+  }
+
+  .svm-hero-sky-quote {
+    right: 3%;
+    top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .svm-hero-section {
+    background-position: 85% center;
+    padding-top: var(--space-6, 1.5rem);
+    padding-bottom: var(--space-8, 2rem);
+  }
+
+  .svm-hero-content {
+    max-width: 100%;
+  }
+
+  .svm-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .svm-hero-sky-quote {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .svm-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .svm-hero-shloka {
+    font-size: 1rem;
+  }
+
+  .svm-hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .svm-hero-highlights {
+    gap: var(--space-2, 0.5rem);
+  }
+
+  .svm-highlight-main {
+    font-size: 0.96rem;
+  }
+
+  .svm-highlight-sub {
+    font-size: 0.65rem;
+  }
+
+  .svm-hero-content {
+    padding: var(--space-4, 1rem);
+  }
+}
