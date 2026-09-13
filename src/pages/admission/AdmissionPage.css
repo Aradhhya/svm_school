@@ -1,0 +1,1300 @@
+/* ======================================================
+   SVM SCHOOL ADMISSION PAGE STYLES
+   ====================================================== */
+
+.svm-admission-page {
+  background-color: var(--color-background, #FBF8F2);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ======================================================
+   SECTION 1: HERO / BANNER
+   ====================================================== */
+
+.svm-admission-hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  background-color: #FBF8F2;
+  background-image:
+    linear-gradient(to right, #FBF8F2 0%, #FBF8F2 36%, rgba(251, 248, 242, 0.94) 48%, rgba(251, 248, 242, 0.2) 64%, transparent 100%),
+    url('../../assets/admission-hero.jpg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+   padding: 2.5rem 0; 
+  overflow: hidden;
+}
+
+/* Faint Floral Leaf Watermark on Far Left */
+.svm-admission-leaf-decor {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+.svm-admission-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.svm-admission-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 540px;
+}
+
+/* Breadcrumb */
+.svm-admission-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #6B7280;
+  margin-bottom: 1.25rem;
+}
+
+.svm-breadcrumb-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4B5563;
+  text-decoration: none;
+  transition: color var(--transition-fast, 150ms ease);
+}
+
+.svm-breadcrumb-home:hover {
+  color: #680815;
+}
+
+.svm-breadcrumb-sep {
+  color: #9CA3AF;
+  font-size: 0.85rem;
+}
+
+.svm-breadcrumb-current {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+/* Eyebrow */
+.svm-admission-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.svm-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #C58A3A;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.svm-eyebrow-bar {
+  width: 38px;
+  height: 2px;
+  background-color: #C58A3A;
+  border-radius: 2px;
+}
+
+/* Title */
+.svm-admission-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: #680815;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.15rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Description */
+.svm-admission-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0 0 2rem 0;
+  max-width: 480px;
+}
+
+/* Buttons Group */
+.svm-admission-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Primary Maroon Button */
+.svm-admission-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #680815;
+  color: #FFFFFF;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(104, 8, 21, 0.25);
+  transition: all var(--transition-normal, 250ms ease);
+}
+
+.svm-admission-btn-primary:hover {
+  background-color: #880B1D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(104, 8, 21, 0.35);
+}
+
+.svm-admission-btn-primary .svm-btn-arrow {
+  font-size: 1.15rem;
+  transition: transform var(--transition-fast, 150ms ease);
+}
+
+.svm-admission-btn-primary:hover .svm-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Secondary Outline Button */
+.svm-admission-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  background-color: #FFFDF9;
+  color: #680815;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  border: 1.5px solid #680815;
+  text-decoration: none;
+  transition: all var(--transition-normal, 250ms ease);
+  box-shadow: 0 2px 8px rgba(60, 35, 15, 0.04);
+}
+
+.svm-admission-btn-outline:hover {
+  background-color: #680815;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(104, 8, 21, 0.2);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .svm-admission-hero {
+    background-image:
+      linear-gradient(to right, rgba(251, 248, 242, 0.95) 0%, rgba(251, 248, 242, 0.9) 100%),
+      url('../../assets/admission-hero.jpg');
+    padding: 3.5rem 0;
+    min-height: 420px;
+  }
+
+  .svm-admission-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-admission-title {
+    font-size: 2.15rem;
+  }
+
+  .svm-admission-btn-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .svm-admission-btn-primary,
+  .svm-admission-btn-outline {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ======================================================
+   SECTION 2: KEY DATES & DOCUMENTS
+   ====================================================== */
+
+.svm-dates-docs-section {
+  position: relative;
+  background-color: var(--color-background, #FBF8F2);
+  padding: 5rem 0 6rem 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+}
+
+/* Corner Leaf Watermarks */
+.svm-corner-leaf {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svm-corner-leaf-tl {
+  top: 15px;
+  left: 20px;
+}
+
+.svm-corner-leaf-tr {
+  top: 15px;
+  right: 20px;
+}
+
+.svm-dates-docs-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Header */
+.svm-section-title-wrap {
+  text-align: center;
+  margin-bottom: 3.25rem;
+}
+
+.svm-dates-docs-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.015em;
+}
+
+.svm-dates-docs-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1.05rem;
+  color: #4B5563;
+  margin: 0 auto;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+/* Two Cards Grid */
+.svm-dates-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Base Card Style */
+.svm-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #ECE3D7;
+  box-shadow: 0 8px 30px rgba(70, 40, 20, 0.04);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.svm-card:hover {
+  box-shadow: 0 12px 36px rgba(70, 40, 20, 0.08);
+}
+
+/* Card Header */
+.svm-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
+.svm-header-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svm-icon-orange {
+  background-color: #FDF0E9;
+}
+
+.svm-icon-teal {
+  background-color: #E2F1EC;
+}
+
+.svm-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.svm-card-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.svm-card-badge-label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #8C8881;
+  text-transform: uppercase;
+}
+
+/* Calendar Table Structure */
+.svm-calendar-table-wrap {
+  border: 1px solid #EDE5D8;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: #FFFFFF;
+}
+
+.svm-calendar-table-header {
+  background: #78111B;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.svm-calendar-table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-calendar-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #F2ECE1;
+  transition: background-color 0.15s ease;
+}
+
+.svm-calendar-row:last-child {
+  border-bottom: none;
+}
+
+.svm-calendar-row:hover {
+  background-color: #FDFBF7;
+}
+
+.svm-col-particulars {
+  flex: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.svm-col-timeline {
+  flex: 1.2;
+  text-align: left;
+}
+
+.svm-row-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svm-row-title {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.svm-row-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Calendar Note Box */
+.svm-calendar-note {
+  position: relative;
+  overflow: hidden;
+  background: #FAF2F0;
+  border: 1px solid #F5DBD5;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.svm-note-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.svm-note-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-note-label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #78111B;
+}
+
+.svm-note-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  color: #63393D;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.svm-note-watermark {
+  position: absolute;
+  right: 8px;
+  bottom: -4px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Documents List Stack */
+.svm-docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.svm-doc-item {
+  background: #FFFFFF;
+  border: 1px solid #EDE5D8;
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.svm-doc-item:hover {
+  border-color: #D6C7B2;
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(70, 40, 20, 0.05);
+}
+
+.svm-doc-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svm-badge-peach {
+  background-color: #FDF0E9;
+}
+
+.svm-badge-green {
+  background-color: #E2F1EC;
+}
+
+.svm-badge-orange {
+  background-color: #FEF3C7;
+}
+
+.svm-doc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.svm-doc-name {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0;
+}
+
+.svm-doc-sub {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Decorative Books Stack Element */
+.svm-dates-books-decor {
+  position: absolute;
+  right: -25px;
+  bottom: -40px;
+  width: 250px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.95;
+  mask-image: radial-gradient(circle at 60% 60%, black 50%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at 60% 60%, black 50%, transparent 85%);
+}
+
+.svm-books-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(50, 25, 10, 0.15));
+}
+
+/* Responsive Styles for Section 2 */
+@media (max-width: 980px) {
+  .svm-dates-docs-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .svm-dates-docs-title {
+    font-size: 2.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-dates-docs-section {
+    padding: 3.5rem 0 4.5rem 0;
+  }
+
+  .svm-dates-docs-title {
+    font-size: 1.95rem;
+  }
+
+  .svm-card {
+    padding: 1.5rem;
+  }
+
+  .svm-calendar-table-header,
+  .svm-calendar-row {
+    padding: 12px 14px;
+  }
+
+  .svm-doc-item {
+    padding: 10px 14px;
+    gap: 12px;
+  }
+}
+
+/* ======================================================
+   SECTION 3: ELIGIBILITY CRITERIA
+   ====================================================== */
+
+.svm-eligibility-section {
+  position: relative;
+  background-color: var(--color-background, #FBF8F2);
+  padding: 5rem 0 6rem 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+}
+
+.svm-eligibility-leaf-mid {
+  position: absolute;
+  top: 15px;
+  left: 48%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svm-eligibility-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.svm-eligibility-header {
+  text-align: left;
+  margin-bottom: 2.75rem;
+}
+
+.svm-eligibility-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.015em;
+}
+
+.svm-eligibility-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1.05rem;
+  color: #4B5563;
+  margin: 0;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+/* Main 2-Column Grid */
+.svm-eligibility-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.svm-eligibility-card {
+  padding: 2.25rem 2.25rem;
+}
+
+.svm-icon-cap {
+  background-color: #FDF0E9;
+}
+
+/* Criteria Table */
+.svm-criteria-table-wrap {
+  border: 1px solid #EDE5D8;
+  border-radius: 14px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  background: #FFFFFF;
+}
+
+.svm-criteria-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body, "Inter", sans-serif);
+  text-align: left;
+}
+
+.svm-criteria-table thead tr {
+  background: #78111B;
+  color: #FFFFFF;
+}
+
+.svm-criteria-table th {
+  padding: 12px 14px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.35;
+  vertical-align: middle;
+  border: none;
+}
+
+.svm-criteria-table td {
+  padding: 11px 14px;
+  font-size: 0.88rem;
+  color: #374151;
+  border-bottom: 1px solid #F2ECE1;
+  vertical-align: middle;
+}
+
+.svm-criteria-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.svm-criteria-table tbody tr:hover {
+  background-color: #FDFBF8;
+}
+
+.svm-criteria-table .td-class {
+  color: #1F2937;
+  font-weight: 700;
+}
+
+.svm-criteria-table .td-dash {
+  color: #9CA3AF;
+  text-align: center;
+}
+
+.svm-criteria-table .td-nature {
+  color: #4B5563;
+}
+
+.svm-criteria-table .td-subject {
+  font-size: 0.82rem;
+  color: #4B5563;
+  font-weight: 500;
+}
+
+.svm-criteria-note {
+  margin-top: 0;
+}
+
+/* Right Sidebar: Editorial composite & Pillars */
+.svm-eligibility-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+/* Quote + Student Photo Banner */
+.svm-quote-visual-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 230px;
+}
+
+.svm-quote-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.svm-quote-mark {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.5rem;
+  color: #D97706;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.svm-quote-heading {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 1.42rem;
+  font-weight: 600;
+  color: #1F2937;
+  line-height: 1.38;
+  margin: 0 0 1rem 0;
+}
+
+.svm-quote-underline {
+  width: 38px;
+  height: 2.5px;
+  background-color: #C58A3A;
+  border-radius: 2px;
+}
+
+.svm-quote-img-container {
+  flex: 1.25;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(60, 35, 15, 0.08);
+  border: 1px solid #ECE3D7;
+}
+
+.svm-quote-student-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  object-position: 50% 15%;
+  display: block;
+}
+
+/* Pillars List */
+.svm-pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.svm-pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 8px 4px;
+}
+
+.svm-pillar-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #FDF0E9;
+  border: 1.5px solid #F5DED8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.svm-pillar-item:hover .svm-pillar-icon-badge {
+  transform: scale(1.08);
+  background-color: #FDE8DE;
+}
+
+.svm-pillar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.svm-pillar-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0;
+}
+
+.svm-pillar-sub {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Responsive Styles for Section 3 */
+@media (max-width: 1080px) {
+  .svm-eligibility-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .svm-quote-visual-banner {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-eligibility-section {
+    padding: 3.5rem 0 4.5rem 0;
+  }
+
+  .svm-eligibility-title {
+    font-size: 2rem;
+  }
+
+  .svm-quote-visual-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .svm-quote-student-img {
+    height: 190px;
+  }
+
+  .svm-criteria-table th,
+  .svm-criteria-table td {
+    padding: 10px 10px;
+    font-size: 0.82rem;
+  }
+}
+
+/* ======================================================
+   SECTION 4: ADMISSION INQUIRY FORM
+   ====================================================== */
+
+.svm-inquiry-section {
+  position: relative;
+  background-color: var(--color-background, #FBF8F2);
+  padding: 5.5rem 0 6.5rem 0;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+}
+
+.svm-inquiry-container {
+  width: 100%;
+}
+
+.svm-inquiry-main-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.015em;
+}
+
+.svm-inquiry-main-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1.05rem;
+  color: #4B5563;
+  margin: 0 auto;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+/* 2-Column Grid */
+.svm-inquiry-grid {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-top: 3.5rem;
+}
+
+/* Left Column */
+.svm-inquiry-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-inquiry-talk-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #680815;
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.015em;
+}
+
+.svm-inquiry-talk-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1rem;
+  color: #4B5563;
+  line-height: 1.65;
+  margin: 0 0 2.5rem 0;
+  max-width: 460px;
+}
+
+.svm-inquiry-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.svm-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.svm-perk-icon-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #FDF0E9;
+  border: 1.5px solid #F6DDD6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #78111B;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.svm-perk-item:hover .svm-perk-icon-circle {
+  transform: scale(1.06);
+  background-color: #FCE8DE;
+}
+
+.svm-perk-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.svm-perk-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0;
+}
+
+.svm-perk-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Right Column: Form Card */
+.svm-inquiry-form-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #ECE3D7;
+  box-shadow: 0 12px 36px rgba(60, 35, 15, 0.06);
+  overflow: hidden;
+}
+
+.svm-form-header {
+  background: linear-gradient(135deg, #78111B 0%, #8E1624 100%);
+  padding: 1.75rem 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.svm-form-header-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.svm-form-header-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.svm-form-header-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.svm-form-header-sub {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+
+/* Form Body */
+.svm-form-body {
+  padding: 2.25rem 2.25rem 2rem 2.25rem;
+}
+
+.svm-form-success-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  color: #166534;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.svm-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.svm-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.svm-field-full {
+  margin-bottom: 1.5rem;
+}
+
+.svm-form-label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.svm-required {
+  color: #DC2626;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.svm-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.svm-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.svm-input-icon-right {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.svm-textarea-icon {
+  top: 16px;
+  transform: none;
+}
+
+.svm-form-input {
+  width: 100%;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.92rem;
+  color: #1F2937;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 11px 14px 11px 40px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.svm-form-input:focus {
+  border-color: #78111B;
+  box-shadow: 0 0 0 3px rgba(120, 17, 27, 0.1);
+}
+
+.svm-form-input::placeholder {
+  color: #9CA3AF;
+  font-size: 0.88rem;
+}
+
+.svm-select-wrapper {
+  position: relative;
+}
+
+.svm-form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 38px;
+  cursor: pointer;
+}
+
+.svm-select-chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.svm-form-textarea {
+  min-height: 85px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.svm-form-submit-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #78111B;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(120, 17, 27, 0.2);
+}
+
+.svm-form-submit-btn:hover {
+  background: #921825;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(120, 17, 27, 0.3);
+}
+
+.svm-btn-icon-arrow {
+  font-size: 1.15rem;
+  transition: transform 0.15s ease;
+}
+
+.svm-form-submit-btn:hover .svm-btn-icon-arrow {
+  transform: translateX(4px);
+}
+
+/* Privacy Notice */
+.svm-form-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.25rem;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.78rem;
+  color: #6B7280;
+  text-align: center;
+}
+
+/* Responsive Styles for Section 4 */
+@media (max-width: 980px) {
+  .svm-inquiry-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .svm-inquiry-talk-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-inquiry-section {
+    padding: 3.5rem 0 4.5rem 0;
+  }
+
+  .svm-inquiry-main-title,
+  .svm-inquiry-talk-title {
+    font-size: 2.15rem;
+  }
+
+  .svm-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .svm-form-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .svm-form-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .svm-form-header-title {
+    font-size: 1.45rem;
+  }
+}

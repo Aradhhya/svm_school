@@ -1,0 +1,1037 @@
+/* ======================================================
+   SVM SCHOOL CONTACT PAGE STYLES
+   ====================================================== */
+
+.svm-contact-page {
+  background-color: var(--color-background, #FBF8F2);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ======================================================
+   SECTION 1: HERO / BANNER
+   ====================================================== */
+
+.svm-contact-hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  background-color: #FBF8F2;
+  background-image:
+    linear-gradient(to right, #FBF8F2 0%, #FBF8F2 38%, rgba(251, 248, 242, 0.94) 48%, rgba(251, 248, 242, 0.25) 62%, transparent 100%),
+    url('../../assets/contact-building.jpg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+  /* padding: 5.5rem 0; */
+  overflow: hidden;
+}
+
+/* Faint Foliage Decor on Far Left */
+.svm-contact-leaf-decor {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.svm-contact-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.svm-contact-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 520px;
+}
+
+/* Breadcrumb */
+.svm-contact-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #6B7280;
+  margin-bottom: 1.5rem;
+}
+
+.svm-contact-breadcrumb a {
+  color: #4B5563;
+  text-decoration: none;
+  transition: color var(--transition-fast, 150ms ease);
+}
+
+.svm-contact-breadcrumb a:hover {
+  color: #680815;
+}
+
+.svm-contact-breadcrumb-sep {
+  color: #9CA3AF;
+  font-size: 0.82rem;
+}
+
+.svm-contact-breadcrumb-current {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+/* Eyebrow */
+.svm-contact-eyebrow {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #C58A3A;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.95rem;
+}
+
+/* Title */
+.svm-contact-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 3.35rem;
+  font-weight: 700;
+  color: #680815;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Description */
+.svm-contact-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 980px) {
+  .svm-contact-hero {
+    background-image:
+      linear-gradient(to right, rgba(251, 248, 242, 0.96) 0%, rgba(251, 248, 242, 0.9) 100%),
+      url('../../assets/contact-building.jpg');
+    padding: 4rem 0;
+    min-height: 400px;
+  }
+
+  .svm-contact-title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-contact-hero {
+    padding: 3.5rem 0;
+    min-height: 360px;
+  }
+
+  .svm-contact-title {
+    font-size: 2.25rem;
+  }
+
+  .svm-contact-desc {
+    font-size: 0.94rem;
+  }
+}
+
+/* ======================================================
+   SECTION 2: CONTACT INFO CARDS
+   ====================================================== */
+
+.svm-contact-cards-section {
+  background-color: var(--color-background, #FBF8F2);
+  padding: 3rem 0 3.5rem 0;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+}
+
+.svm-contact-cards-container {
+  width: 100%;
+}
+
+.svm-contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.svm-contact-card {
+  background: #FFFFFF;
+  border: 1px solid #ECE3D7;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 4px 18px rgba(60, 35, 15, 0.03);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.svm-contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(60, 35, 15, 0.07);
+  border-color: #DFD5C8;
+}
+
+.svm-card-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FDF0E9;
+  border: 1.5px solid #F6DDD6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #78111B;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.svm-contact-card:hover .svm-card-icon-circle {
+  transform: scale(1.08);
+  background-color: #FCE8DE;
+}
+
+.svm-card-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.svm-card-heading {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.svm-card-line {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #4B5563;
+  margin: 0;
+}
+
+.svm-card-subline {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.76rem;
+  color: #8C8881;
+  margin: 3px 0 0 0;
+}
+
+.svm-contact-link {
+  color: #4B5563;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.svm-contact-link:hover {
+  color: #78111B;
+  text-decoration: underline;
+}
+
+/* Responsive Styles for Contact Info Cards */
+@media (max-width: 1120px) {
+  .svm-contact-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-contact-cards-section {
+    padding: 2.25rem 0 2.75rem 0;
+  }
+
+  .svm-contact-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .svm-contact-card {
+    padding: 1.25rem 1rem;
+  }
+}
+
+/* ======================================================
+   SECTION 3: MAP & MESSAGE FORM
+   ====================================================== */
+
+.svm-contact-interactive-section {
+  background-color: var(--color-background, #FBF8F2);
+  padding: 5rem 0 6rem 0;
+}
+
+.svm-contact-interactive-container {
+  width: 100%;
+}
+
+.svm-contact-split-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* ---------------- LEFT: MAP BLOCK ---------------- */
+.svm-map-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-map-header {
+  margin-bottom: 1.5rem;
+}
+
+.svm-map-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.svm-map-accent-line {
+  width: 44px;
+  height: 2.5px;
+  background-color: #D97706;
+  border-radius: 2px;
+}
+
+.svm-map-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.svm-map-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.96rem;
+  color: #4B5563;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.svm-map-box {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #ECE3D7;
+  box-shadow: 0 10px 30px rgba(60, 35, 15, 0.05);
+  background: #EAE6DF;
+}
+
+.svm-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Floating Location Pin Badge */
+.svm-map-pin-badge {
+  position: absolute;
+  top: 42%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid #F5DBD5;
+  border-radius: 9999px;
+  padding: 6px 14px 6px 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.svm-pin-label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #680815;
+  white-space: nowrap;
+}
+
+/* Floating Directions Button */
+.svm-map-directions-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #680815;
+  color: #FFFFFF;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(104, 8, 21, 0.35);
+  transition: all 0.2s ease;
+}
+
+.svm-map-directions-btn:hover {
+  background: #880B1D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(104, 8, 21, 0.45);
+}
+
+.svm-map-directions-btn .svm-btn-arrow {
+  transition: transform 0.15s ease;
+}
+
+.svm-map-directions-btn:hover .svm-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------------- RIGHT: MESSAGE FORM CARD ---------------- */
+.svm-message-card {
+  position: relative;
+  background: #680815;
+  background: linear-gradient(145deg, #680815 0%, #7E0D1C 100%);
+  border-radius: 22px;
+  padding: 2.5rem 2.5rem 2.25rem 2.5rem;
+  box-shadow: 0 12px 36px rgba(104, 8, 21, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-msg-corner-watermark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svm-msg-card-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 1.75rem;
+}
+
+.svm-msg-card-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.svm-msg-card-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.svm-msg-form {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.svm-msg-success-alert {
+  background: rgba(34, 197, 94, 0.22);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  color: #FFFFFF;
+  padding: 11px 16px;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  font-size: 0.88rem;
+  font-family: var(--font-body, "Inter", sans-serif);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.svm-msg-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.svm-msg-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.svm-msg-field-full {
+  margin-bottom: 1.75rem;
+}
+
+.svm-msg-label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.svm-msg-req {
+  color: #FCA5A5;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.svm-msg-input {
+  background: #FFFFFF;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.92rem;
+  color: #1F2937;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.svm-msg-input:focus {
+  border-color: #EA7A1E;
+  box-shadow: 0 0 0 3px rgba(234, 122, 30, 0.25);
+}
+
+.svm-msg-input::placeholder {
+  color: #9CA3AF;
+  font-size: 0.88rem;
+}
+
+.svm-msg-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.svm-msg-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.svm-msg-select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.svm-msg-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* Submit Orange Button */
+.svm-msg-btn-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.svm-msg-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #EA7A1E;
+  color: #1F2937;
+  border: none;
+  border-radius: 9999px;
+  padding: 13px 44px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(234, 122, 30, 0.35);
+}
+
+.svm-msg-submit-btn:hover {
+  background: #F9882C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(234, 122, 30, 0.45);
+}
+
+.svm-msg-btn-arrow {
+  font-size: 1.15rem;
+  transition: transform 0.15s ease;
+}
+
+.svm-msg-submit-btn:hover .svm-msg-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Styles for Section 3 */
+@media (max-width: 1024px) {
+  .svm-contact-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .svm-map-box {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-contact-interactive-section {
+    padding: 3.5rem 0 4.5rem 0;
+  }
+
+  .svm-map-title,
+  .svm-msg-card-title {
+    font-size: 1.95rem;
+  }
+
+  .svm-message-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .svm-msg-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .svm-msg-submit-btn {
+    width: 100%;
+  }
+}
+
+/* ======================================================
+   SECTION 4: FREQUENTLY ASKED QUESTIONS (FAQ)
+   ====================================================== */
+
+.svm-contact-faq-section {
+  background-color: var(--color-background, #FBF8F2);
+  padding: 5rem 0 6.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border-light, #F0E6D7);
+}
+
+.svm-faq-container {
+  width: 100%;
+}
+
+.svm-faq-layout-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+/* ---------------- LEFT: ARTISTIC VISUAL CARD ---------------- */
+.svm-faq-visual-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.svm-faq-visual-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border-top-right-radius: 95px;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #ECE3D7;
+  box-shadow: 0 12px 34px rgba(60, 35, 15, 0.06);
+}
+
+/* Left Brand Stamp */
+.svm-faq-brand-stamp {
+  position: absolute;
+  left: 18px;
+  top: 30px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.svm-stamp-lotus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svm-stamp-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #7D613D;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+}
+
+/* Image Wrap */
+.svm-faq-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 460px;
+  overflow: hidden;
+}
+
+.svm-faq-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 50%;
+  display: block;
+}
+
+/* Bottom Curve Badge */
+.svm-faq-bottom-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 190px;
+  background: #FBF8F2;
+  border-top-right-radius: 80px;
+  padding: 22px 18px 16px 18px;
+  box-shadow: 0 -4px 18px rgba(60, 35, 15, 0.06);
+  border-top: 3px solid #680815;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.svm-badge-book-icon {
+  color: #C58A3A;
+  margin-bottom: 6px;
+}
+
+.svm-badge-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.svm-badge-title-1 {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: 0.06em;
+}
+
+.svm-badge-title-2 {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #680815;
+  letter-spacing: 0.06em;
+}
+
+.svm-badge-line {
+  width: 32px;
+  height: 1.5px;
+  background: #C58A3A;
+  margin-top: 5px;
+  border-radius: 1px;
+}
+
+/* ---------------- RIGHT: FAQ ACCORDION ---------------- */
+.svm-faq-content-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-faq-header-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.svm-faq-header-titles {
+  flex: 1;
+}
+
+.svm-faq-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.65rem;
+}
+
+.svm-faq-eyebrow-line {
+  width: 34px;
+  height: 2.5px;
+  background-color: #D97706;
+  border-radius: 2px;
+}
+
+.svm-faq-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #D97706;
+  letter-spacing: 0.12em;
+}
+
+.svm-faq-main-heading {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #680815;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.svm-faq-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.98rem;
+  color: #4B5563;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 530px;
+}
+
+/* Sanskrit Motto on Far Right */
+.svm-faq-sanskrit-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  padding: 6px 12px;
+  margin-top: 5px;
+}
+
+.svm-sanskrit-leaf {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svm-sanskrit-text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #D4A259;
+  line-height: 1.25;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-sanskrit-line {
+  width: 38px;
+  height: 1.5px;
+  background: #D4A259;
+  margin-top: 6px;
+  border-radius: 1px;
+}
+
+/* Accordion List */
+.svm-faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.svm-faq-item {
+  background: #FFFFFF;
+  border: 1px solid #ECE3D7;
+  border-radius: 9999px;
+  transition: all 0.22s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(60, 35, 15, 0.02);
+}
+
+.svm-faq-item.active {
+  border-radius: 18px;
+  border-color: #D6C7B2;
+  box-shadow: 0 6px 20px rgba(60, 35, 15, 0.06);
+}
+
+.svm-faq-item-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.svm-faq-item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.svm-faq-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FDF0E9;
+  border: 1px solid #F5DED8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #78111B;
+}
+
+.svm-faq-question {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.svm-faq-toggle-icon {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #78111B;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.svm-faq-item-body {
+  padding: 0 24px 16px 64px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #4B5563;
+  animation: faqFadeIn 0.2s ease;
+}
+
+.svm-faq-item-body p {
+  margin: 0;
+}
+
+@keyframes faqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles for Section 4 */
+@media (max-width: 1024px) {
+  .svm-faq-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .svm-faq-visual-card {
+    max-width: 580px;
+    margin: 0 auto;
+    height: 480px;
+  }
+
+  .svm-faq-img-wrap {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-contact-faq-section {
+    padding: 3.5rem 0 4.5rem 0;
+  }
+
+  .svm-faq-main-heading {
+    font-size: 2.1rem;
+  }
+
+  .svm-faq-header-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .svm-faq-sanskrit-badge {
+    align-self: flex-start;
+  }
+
+  .svm-faq-visual-card {
+    height: 340px;
+  }
+
+  .svm-faq-img-wrap {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .svm-faq-bottom-badge {
+    width: 160px;
+    padding: 16px 12px 12px 12px;
+  }
+
+  .svm-faq-item-body {
+    padding: 0 16px 14px 16px;
+  }
+}

@@ -169,34 +169,7 @@ const Footer = ({ onNavigate }) => {
         </div>
 
         {/* Bottom Decorative Section with Slogan & Lotus Motif */}
-        <div className="svm-footer-bottom">
-          <div className="svm-footer-slogan">
-            <p className="svm-slogan-line1">“Exploring Today.</p>
-            <p className="svm-slogan-line2">Growing for Tomorrow.”</p>
-          </div>
-
-          <div className="svm-footer-divider-group">
-            <span className="svm-footer-line"></span>
-            <div className="svm-lotus-motif" aria-hidden="true">
-              <svg viewBox="0 0 64 48" width="48" height="36" fill="none" stroke="#D4A259" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                {/* Central Lotus Petal */}
-                <path d="M32 6 C30 18, 26 28, 32 38 C38 28, 34 18, 32 6 Z" />
-                {/* Inner Left Petal */}
-                <path d="M32 38 C23 32, 17 20, 24 12 C28 20, 30 28, 32 38 Z" />
-                {/* Inner Right Petal */}
-                <path d="M32 38 C41 32, 47 20, 40 12 C36 20, 34 28, 32 38 Z" />
-                {/* Outer Left Petal */}
-                <path d="M32 38 C14 36, 8 26, 14 20 C20 25, 26 32, 32 38 Z" />
-                {/* Outer Right Petal */}
-                <path d="M32 38 C50 36, 56 26, 50 20 C44 25, 38 32, 32 38 Z" />
-                {/* Lotus Base / Water waves */}
-                <path d="M18 42 C24 39, 40 39, 46 42" strokeWidth="1.4" />
-                <path d="M22 45 C28 43, 36 43, 42 45" strokeWidth="1.2" />
-              </svg>
-            </div>
-            <span className="svm-footer-line"></span>
-          </div>
-        </div>
+       
 
       </div>
     </footer>

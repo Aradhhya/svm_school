@@ -12,12 +12,22 @@ import './App.css';
 
 const VALID_PAGES = ['home', 'about', 'academics', 'facilities', 'gallery', 'admission', 'contact'];
 
+const normalizePageHash = (rawHash) => {
+  if (!rawHash) return 'home';
+  const clean = rawHash.replace('#', '').toLowerCase().trim();
+  if (clean === 'admissions' || clean.startsWith('admission')) {
+    return 'admission';
+  }
+  if (VALID_PAGES.includes(clean)) {
+    return clean;
+  }
+  return null;
+};
+
 const getInitialPage = () => {
   if (typeof window !== 'undefined') {
-    const hash = window.location.hash.replace('#', '').toLowerCase();
-    if (VALID_PAGES.includes(hash)) {
-      return hash;
-    }
+    const matched = normalizePageHash(window.location.hash);
+    if (matched) return matched;
   }
   return 'home';
 };
@@ -27,9 +37,9 @@ function App() {
 
   useEffect(() => {
     const handleHashChange = () => {
-      const currentHash = window.location.hash.replace('#', '').toLowerCase();
-      if (VALID_PAGES.includes(currentHash)) {
-        setActivePage(currentHash);
+      const matched = normalizePageHash(window.location.hash);
+      if (matched) {
+        setActivePage(matched);
       }
     };
 
