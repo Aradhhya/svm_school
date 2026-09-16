@@ -395,6 +395,13 @@ const GalleryPage = () => {
                 <span className="svm-gallery-crumb-sep">›</span>
                 <span className="svm-gallery-crumb-active">Gallery</span>
               </nav>
+                
+              {/* Eyebrow / Hindi-English Label */}
+            <div className="svm-facilities-eyebrow">
+              <span className="svm-eyebrow-hindi">हमारी चित्रागार</span>
+              <span className="svm-eyebrow-bullet">•</span>
+              <span className="svm-eyebrow-eng">OUR GALLERY</span>
+            </div>
 
               {/* Main Heading */}
               <h1 className="svm-gallery-heading">
@@ -411,18 +418,7 @@ const GalleryPage = () => {
               </p>
             </div>
 
-            {/* Mid-Right: Sanskrit Quote & English Translation */}
-            <div className="svm-gallery-quote-block">
-              <div className="svm-gallery-sanskrit-text">
-                “स्मृतयः शिक्षायाः<br />
-                मधुरतमाः फलानि भवन्ति ।”
-              </div>
-              <div className="svm-gallery-quote-line" aria-hidden="true"></div>
-              <div className="svm-gallery-quote-translation">
-                “Memories are the sweetest<br />
-                fruits of learning.”
-              </div>
-            </div>
+          
 
           </div>
         </div>

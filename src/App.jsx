@@ -18,6 +18,9 @@ const normalizePageHash = (rawHash) => {
   if (clean === 'admissions' || clean.startsWith('admission')) {
     return 'admission';
   }
+  if (clean === 'philosophy' || clean === 'our-philosophy') {
+    return 'academics';
+  }
   if (VALID_PAGES.includes(clean)) {
     return clean;
   }

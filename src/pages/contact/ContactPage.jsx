@@ -59,9 +59,11 @@ const ContactPage = () => {
               <span className="svm-contact-breadcrumb-current">Contact</span>
             </nav>
 
-            {/* Eyebrow Label */}
-            <div className="svm-contact-eyebrow">
-              GET IN TOUCH
+            {/* Eyebrow / Hindi-English Label */}
+            <div className="svm-facilities-eyebrow">
+              <span className="svm-eyebrow-hindi">संपर्क करें </span>
+              <span className="svm-eyebrow-bullet">•</span>
+              <span className="svm-eyebrow-eng">CONTACT US</span>
             </div>
 
             {/* Main Headline */}
@@ -97,8 +99,8 @@ const ContactPage = () => {
               </div>
               <div className="svm-card-body">
                 <h3 className="svm-card-heading">Our Address</h3>
-                <p className="svm-card-line">Baldev Sahay Path, Kadamkuan,</p>
-                <p className="svm-card-line">Patna, Bihar – 800003</p>
+                <p className="svm-card-line">Sangat, Phulwari Shree</p>
+                <p className="svm-card-line"> Patna, Bihar – 801505</p>
               </div>
             </div>
 
@@ -112,10 +114,10 @@ const ContactPage = () => {
               <div className="svm-card-body">
                 <h3 className="svm-card-heading">Call Us</h3>
                 <p className="svm-card-line">
-                  <a href="tel:+919006502899" className="svm-contact-link">+91 9006502899</a>
+                  <a href="tel:+918873072293" className="svm-contact-link">+91 8873072293</a>
                 </p>
                 <p className="svm-card-line">
-                  <a href="tel:+918544118904" className="svm-contact-link">+91 8544118904</a>
+                  <a href="tel:+919110985925" className="svm-contact-link">+91 9110985925</a>
                 </p>
               </div>
             </div>
@@ -131,7 +133,7 @@ const ContactPage = () => {
               <div className="svm-card-body">
                 <h3 className="svm-card-heading">Email Us</h3>
                 <p className="svm-card-line">
-                  <a href="mailto:saraswatividyamandir1977@gmail.com" className="svm-contact-link">saraswatividyamandir1977@gmail.com</a>
+                  <a href="mailt0:unssvmphulwari@gmail.com" className="svm-contact-link">unssvmphulwari@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -146,7 +148,7 @@ const ContactPage = () => {
               </div>
               <div className="svm-card-body">
                 <h3 className="svm-card-heading">Office Hours</h3>
-                <p className="svm-card-line">Mon – Sat : 7:30 AM to 2:00 PM</p>
+                <p className="svm-card-line">Mon – Sat : 7:30 AM to 3:00 PM</p>
                 <p className="svm-card-subline">(Excluding Sundays &amp; Holidays)</p>
               </div>
             </div>
@@ -179,7 +181,7 @@ const ContactPage = () => {
               <div className="svm-map-box">
                 <iframe
                   title="Saraswati Vidya Mandir Location Map"
-                  src="https://maps.google.com/maps?q=Saraswati+Vidya+Mandir+Kadamkuan+Patna&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.781786960343!2d85.07239841014048!3d25.57892567614591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2a9b062776fb7%3A0xcfcc1fb4f5c453b8!2sUNS%20Saraswati%20Vidya%20Mandir%20-%20Phulwari%20Shree!5e0!3m2!1sen!2sin!4v1789378663096!5m2!1sen!2sin"
                   className="svm-map-iframe"
                   loading="lazy"
                   allowFullScreen
@@ -190,7 +192,7 @@ const ContactPage = () => {
                   <svg viewBox="0 0 24 24" width="22" height="22" fill="#E53E3E">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                  <span className="svm-pin-label">Saraswati Vidya Mandir</span>
+                  <span className="svm-pin-label"> U.N.S Saraswati Vidya Mandir</span>
                 </div>
 
                 {/* Get Directions Floating CTA Button */}

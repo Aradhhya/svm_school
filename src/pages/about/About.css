@@ -1,0 +1,2236 @@
+/* ======================================================
+   SVM SCHOOL ABOUT US PAGE STYLES
+   (Consistent with ContactPage & FacilitiesPage Architecture)
+   ====================================================== */
+
+.svm-about-page {
+  background-color: var(--color-background, #FBF8F2);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ======================================================
+   SECTION 1: HERO / BANNER
+   ====================================================== */
+
+.svm-about-hero {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  background-color: #FBF8F2;
+  background-image:
+    linear-gradient(to right, #FBF8F2 0%, #FBF8F2 36%, rgba(251, 248, 242, 0.94) 48%, rgba(251, 248, 242, 0.22) 64%, transparent 100%),
+    url('../../assets/about-faculty-banner.jpg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-border-light, #F0E6D7);
+  overflow: hidden;
+  padding: 40px 46px;
+}
+
+/* Background Golden Lotus Watermark Decor */
+.svm-about-lotus-decor {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.32;
+}
+
+.svm-about-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.svm-about-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 530px;
+}
+
+/* Breadcrumb Navigation */
+.svm-about-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.svm-about-breadcrumb a {
+  color: #4B5563;
+  text-decoration: none;
+  transition: color var(--transition-fast, 150ms ease);
+}
+
+.svm-about-breadcrumb a:hover {
+  color: var(--color-primary, #7F0A1A);
+}
+
+.svm-breadcrumb-sep {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+}
+
+.svm-breadcrumb-current {
+  color: #8C1D2F;
+  font-weight: 700;
+}
+
+/* Accent Line below Breadcrumb (as in Mockup) */
+.svm-breadcrumb-accent-line {
+  width: 44px;
+  height: 1.5px;
+  background-color: #D9822B;
+  margin-bottom: 14px;
+}
+
+/* Eyebrow Label with Flanking Rules */
+.svm-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.svm-about-eyebrow .svm-eyebrow-line {
+  width: 38px;
+  height: 1.5px;
+  background-color: #D9822B;
+}
+
+.svm-about-eyebrow .svm-eyebrow-hindi {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #D9822B;
+}
+
+.svm-about-eyebrow .svm-eyebrow-bullet {
+  color: #D9822B;
+  font-size: 0.8rem;
+}
+
+.svm-about-eyebrow .svm-eyebrow-eng {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #D9822B;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Main Heading */
+.svm-about-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.45rem;
+  font-weight: 800;
+  color: var(--color-heading, #7F0A1A);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Description Text */
+.svm-about-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: #4B5563;
+  margin: 0 0 28px 0;
+  max-width: 480px;
+}
+
+/* 3 Pillar Feature Badges */
+.svm-about-pillars {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.svm-about-pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.svm-pillar-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #FDF4EB;
+  border: 1px solid #F0DAC4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #7F0A1A;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.svm-about-pillar-item:hover .svm-pillar-icon-badge {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 10, 26, 0.12);
+}
+
+.svm-pillar-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-pillar-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2D2622;
+  line-height: 1.2;
+}
+
+.svm-pillar-sub {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.78rem;
+  color: #6E6760;
+}
+
+.svm-pillar-separator {
+  width: 1px;
+  height: 34px;
+  background-color: #E6D9C8;
+  flex-shrink: 0;
+}
+
+/* Bottom Location Bar */
+.svm-about-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 36px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-bar-line {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(169, 111, 36, 0.08), rgba(169, 111, 36, 0.45), rgba(169, 111, 36, 0.08));
+}
+
+.svm-bar-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.svm-bar-sep {
+  color: #C58A3A;
+  margin: 0 8px;
+  opacity: 0.85;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1080px) {
+  .svm-about-hero {
+    background-image:
+      linear-gradient(to right, #FBF8F2 0%, #FBF8F2 48%, rgba(251, 248, 242, 0.95) 62%, rgba(251, 248, 242, 0.3) 80%, transparent 100%),
+      url('../../assets/about-faculty-banner.jpg');
+    padding: 38px 0 36px 0;
+  }
+
+  .svm-about-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .svm-about-hero {
+    min-height: auto;
+    background-image:
+      linear-gradient(to bottom, rgba(251, 248, 242, 0.96) 0%, rgba(251, 248, 242, 0.92) 55%, rgba(251, 248, 242, 0.98) 100%),
+      url('../../assets/about-faculty-banner.jpg');
+    padding: 36px 0 28px 0;
+  }
+
+  .svm-about-title {
+    font-size: 2rem;
+  }
+
+  .svm-about-lotus-decor {
+    display: none;
+  }
+
+  .svm-about-pillars {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .svm-pillar-separator {
+    display: none;
+  }
+
+  .svm-about-pillar-item {
+    flex: 1 1 45%;
+    min-width: 140px;
+  }
+
+  .svm-bar-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 480px) {
+  .svm-about-title {
+    font-size: 1.7rem;
+  }
+
+  .svm-about-desc {
+    font-size: 0.88rem;
+  }
+
+  .svm-about-pillar-item {
+    flex: 1 1 100%;
+  }
+
+  .svm-bar-line {
+    display: none;
+  }
+}
+
+/* ======================================================
+   SECTION 2: OUR STORY (परंपरा में जड़ें, भविष्य की उड़ान।)
+   ====================================================== */
+
+.svm-story-section {
+  position: relative;
+  background-color: #FAF7F2;
+  padding: 64px 0 72px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(197, 138, 58, 0.15);
+}
+
+/* Background Open Book Watermark */
+.svm-story-watermark-book {
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  pointer-events: none;
+  opacity: 0.14;
+  z-index: 1;
+}
+
+.svm-story-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Left Column: Narrative Content */
+.svm-story-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-story-eyebrow-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.svm-story-lotus-icon {
+  display: flex;
+  align-items: center;
+  color: #C58A3A;
+}
+
+.svm-story-line {
+  width: 36px;
+  height: 1.5px;
+  background-color: #D9822B;
+}
+
+.svm-story-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #D9822B;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.svm-story-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.30rem;
+  font-weight: 800;
+  color: #7F0A1A;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  margin: 0 0 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-story-subtitle {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.22rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #5A524C;
+  margin: 0 0 22px 0;
+}
+
+.svm-story-paragraphs {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #524C46;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.svm-story-paragraphs p {
+  margin: 0;
+}
+
+/* Story Pillars at Bottom of Left Column */
+.svm-story-pillars {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(197, 138, 58, 0.22);
+}
+
+.svm-story-pillar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.svm-story-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FDF4EB;
+  border: 1px solid #F0DAC4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #7F0A1A;
+}
+
+.svm-story-pillar-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.svm-story-pillar-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2D2622;
+  line-height: 1.15;
+}
+
+.svm-story-pillar-sub {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.74rem;
+  color: #6E6760;
+}
+
+.svm-story-pillar-separator {
+  width: 1px;
+  height: 32px;
+  background-color: #E6D9C8;
+  flex-shrink: 0;
+}
+
+/* Right Column: Visual Frame & 4 Stat Cards */
+.svm-story-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.svm-story-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  border: 2px solid #D4A259;
+  overflow: visible;
+  box-shadow: 0 16px 40px rgba(60, 35, 15, 0.12);
+  background-color: #FAF7F2;
+  transition: transform 320ms ease, box-shadow 320ms ease;
+}
+
+.svm-story-frame:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 48px rgba(60, 35, 15, 0.16);
+}
+
+.svm-story-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* Floating Card 1: Maroon Quote Card (Bottom-Left) */
+.svm-story-quote-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 43%;
+  min-width: 190px;
+  max-width: 250px;
+  padding: 18px 20px 18px 22px;
+  background: linear-gradient(135deg, #741A28 0%, #5F121F 100%);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 22px;
+  border-top-right-radius: 54px;
+  border-bottom-right-radius: 0;
+  box-shadow: 4px -4px 18px rgba(60, 20, 10, 0.22);
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  transition: transform 250ms ease;
+}
+
+.svm-story-quote-card:hover {
+  transform: translateY(-2px);
+}
+
+.svm-quote-mark-icon {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.svm-quote-card-text {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.34;
+  color: #FFFFFF;
+  margin: 0 0 10px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.svm-quote-card-line {
+  width: 32px;
+  height: 2.5px;
+  background-color: #E5933A;
+  border-radius: 2px;
+}
+
+/* Floating Card 2: Sanskar / Shiksha / Sampurn Vikas Circular Badge (Bottom-Right) */
+.svm-story-circle-badge {
+  position: absolute;
+  bottom: 0px;
+  right: -18px;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: #FFFDF9;
+  border: 2.5px solid #D4A259;
+  box-shadow: 0 10px 28px rgba(60, 35, 15, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  z-index: 4;
+  transition: transform 280ms ease, box-shadow 280ms ease;
+}
+
+.svm-story-circle-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 34px rgba(127, 10, 26, 0.22);
+}
+
+.svm-circle-lotus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.svm-circle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.svm-circle-text span {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #3C342E;
+  line-height: 1.25;
+}
+
+.svm-circle-line {
+  width: 24px;
+  height: 2px;
+  background-color: #D4A259;
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+/* 4 Stat Cards Grid */
+.svm-story-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.svm-story-stat-card {
+  background: #FFFFFF;
+  border: 1px solid #EFE4D6;
+  border-radius: 16px;
+  padding: 16px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 16px rgba(60, 35, 15, 0.04);
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.svm-story-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(127, 10, 26, 0.08);
+  border-color: #D4A259;
+}
+
+.svm-stat-icon-wrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.svm-stat-value {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #7F0A1A;
+  line-height: 1.15;
+}
+
+.svm-stat-label {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #7A7269;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+/* Bottom Location Bar */
+.svm-story-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-story-bar-line {
+  flex: 1;
+  max-width: 220px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(169, 111, 36, 0.08), rgba(169, 111, 36, 0.45), rgba(169, 111, 36, 0.08));
+}
+
+.svm-story-bar-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.svm-story-bar-sep {
+  color: #C58A3A;
+  margin: 0 8px;
+  opacity: 0.85;
+}
+
+/* Responsive Media Queries for Section 2 */
+@media (max-width: 1080px) {
+  .svm-story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .svm-story-visual {
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .svm-story-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .svm-story-section {
+    padding: 44px 0 48px 0;
+  }
+
+  .svm-story-title {
+    font-size: 2rem;
+  }
+
+  .svm-story-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .svm-story-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .svm-story-pillars {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .svm-story-pillar-separator {
+    display: none;
+  }
+
+  .svm-story-pillar-item {
+    flex: 1 1 45%;
+    min-width: 140px;
+  }
+
+  .svm-story-bar-line {
+    display: none;
+  }
+
+  /* Responsive sizes for floating cards */
+  .svm-story-quote-card {
+    width: 48%;
+    min-width: 145px;
+    padding: 12px 14px;
+    border-top-right-radius: 36px;
+  }
+
+  .svm-quote-card-text {
+    font-size: 0.86rem;
+    line-height: 1.28;
+    margin-bottom: 6px;
+  }
+
+  .svm-quote-mark-icon svg {
+    width: 20px;
+    height: 18px;
+  }
+
+  .svm-quote-card-line {
+    width: 24px;
+    height: 2px;
+  }
+
+  .svm-story-circle-badge {
+    width: 112px;
+    height: 112px;
+    bottom: -14px;
+    right: -10px;
+    padding: 8px;
+  }
+
+  .svm-circle-lotus svg {
+    width: 28px;
+    height: 20px;
+  }
+
+  .svm-circle-text span {
+    font-size: 0.56rem;
+    letter-spacing: 0.05em;
+  }
+
+  .svm-circle-line {
+    width: 18px;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 440px) {
+  .svm-story-quote-card {
+    width: 52%;
+    min-width: 130px;
+    padding: 10px 10px;
+  }
+
+  .svm-quote-card-text {
+    font-size: 0.76rem;
+    line-height: 1.22;
+  }
+
+  .svm-story-circle-badge {
+    width: 96px;
+    height: 96px;
+    bottom: -10px;
+    right: -8px;
+    padding: 6px;
+  }
+
+  .svm-circle-lotus svg {
+    width: 24px;
+    height: 16px;
+  }
+
+  .svm-circle-text span {
+    font-size: 0.48rem;
+  }
+}
+
+/* ======================================================
+   SECTION 3: OUR PURPOSE (हमारा उद्देश्य - OUR PURPOSE)
+   ====================================================== */
+
+.svm-purpose-section {
+  position: relative;
+  background-color: #FAF7F2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 56px 0 62px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(197, 138, 58, 0.15);
+
+}
+
+/* Left Semicircle Quote Overlay */
+.svm-purpose-left-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.svm-purpose-badge-italic {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.96rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.25;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.svm-purpose-badge-line {
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4A259, #F5D59A, #D4A259);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+/* Right Building Script Overlay */
+.svm-purpose-right-badge {
+  position: absolute;
+  bottom: 34px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(-4deg);
+}
+
+.svm-purpose-right-badge span {
+  font-family: var(--font-heading, "Playfair Display", Georgia, cursive, serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #5A4738;
+  line-height: 1.25;
+}
+
+.svm-purpose-right-line {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C58A3A, transparent);
+  margin-top: 5px;
+}
+
+.svm-purpose-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 70px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Purpose Header */
+.svm-purpose-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.svm-purpose-lotus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7F0A1A;
+  margin-bottom: 8px;
+}
+
+.svm-purpose-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.svm-purpose-eyebrow-line {
+  width: 38px;
+  height: 1.5px;
+  background-color: #D9822B;
+}
+
+.svm-purpose-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #D9822B;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.svm-purpose-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.30rem;
+  font-weight: 800;
+  line-height: 1.22;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.svm-purpose-title-maroon {
+  color: #7F0A1A;
+}
+
+.svm-purpose-title-gold {
+  color: #B9772B;
+}
+
+.svm-purpose-desc {
+  max-width: 680px;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: #554D47;
+  margin: 0;
+  text-align: center;
+}
+
+/* 3 Purpose Cards Grid */
+.svm-purpose-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.svm-purpose-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 30px 22px 30px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(60, 35, 15, 0.05);
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.svm-purpose-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(127, 10, 26, 0.10);
+}
+
+.svm-purpose-card-vision,
+.svm-purpose-card-mission {
+  background: linear-gradient(180deg, #FFFDFC 0%, #FAF4EE 100%);
+  border: 1px solid #F2E3D5;
+}
+
+.svm-purpose-card-values {
+  background: linear-gradient(180deg, #FDFFFC 0%, #F3F8F2 100%);
+  border: 1px solid #DFEDE0;
+}
+
+/* Icon Badges */
+.svm-purpose-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(127, 10, 26, 0.10);
+  transition: transform 250ms ease;
+}
+
+.svm-purpose-card:hover .svm-purpose-icon-wrap {
+  transform: scale(1.08);
+}
+
+.svm-icon-vision {
+  background-color: #FDF0E9;
+}
+
+.svm-icon-mission {
+  background-color: #FDF0EB;
+}
+
+.svm-icon-values {
+  background-color: #EDF6EC;
+}
+
+.svm-purpose-card-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #7F0A1A;
+  margin: 0 0 12px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-purpose-card-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.62;
+  color: #554E48;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Soft Corner Watermarks */
+.svm-purpose-card-watermark {
+  position: absolute;
+  bottom: -4px;
+  right: 2px;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.svm-purpose-card:hover .svm-purpose-card-watermark {
+  opacity: 0.5;
+  transform: scale(1.05);
+}
+
+/* Bottom Rule Bar */
+.svm-purpose-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.svm-purpose-bar-line {
+  flex: 1;
+  max-width: 220px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(169, 111, 36, 0.08), rgba(169, 111, 36, 0.45), rgba(169, 111, 36, 0.08));
+}
+
+.svm-purpose-bar-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.svm-purpose-dot {
+  color: #C58A3A;
+  margin: 0 6px;
+  opacity: 0.85;
+}
+
+/* Responsive Media Queries for Section 3 */
+@media (max-width: 1280px) {
+  .svm-purpose-container {
+    padding: 0 160px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .svm-purpose-left-badge {
+    left: 10px;
+    bottom: 16px;
+    transform: scale(0.9);
+    transform-origin: bottom left;
+  }
+
+  .svm-purpose-right-badge {
+    right: 14px;
+    bottom: 24px;
+    transform: scale(0.9) rotate(-4deg);
+    transform-origin: bottom right;
+  }
+
+  .svm-purpose-container {
+    padding: 0 130px;
+  }
+}
+
+@media (max-width: 992px) {
+  .svm-purpose-section {
+    background: #FAF7F2;
+    padding: 48px 0 54px 0;
+  }
+
+  .svm-purpose-left-badge,
+  .svm-purpose-right-badge {
+    display: none;
+  }
+
+  .svm-purpose-container {
+    padding: 0 24px;
+  }
+
+  .svm-purpose-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto 36px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .svm-purpose-section {
+    padding: 44px 0 48px 0;
+  }
+
+  .svm-purpose-title {
+    font-size: 1.8rem;
+  }
+
+  .svm-purpose-desc {
+    font-size: 0.86rem;
+  }
+
+  .svm-purpose-bar-line {
+    display: none;
+  }
+
+  .svm-purpose-bar-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ======================================================
+   SECTION 4: SCHOOL CULTURE (The Everyday Rhythms That Shape Us.)
+   ====================================================== */
+
+.svm-culture-section {
+  position: relative;
+  background: linear-gradient(180deg, #FAF7F2 0%, #FAF5EE 50%, #F5EFE4 100%);
+  padding: 58px 0 68px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(197, 138, 58, 0.15);
+}
+
+.svm-culture-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 0px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Top Left Stacked Motto Badge */
+.svm-culture-motto-badge {
+  position: absolute;
+  top: 42px;
+  left: 36px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.svm-culture-motto-word {
+  font-family: var(--font-heading, "Playfair Display", Georgia, cursive, serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #B59077;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+}
+
+.svm-culture-motto-line {
+  width: 48px;
+  height: 1.5px;
+  background: #C58A3A;
+  margin-top: 6px;
+  border-radius: 1px;
+}
+
+/* Top Right Quote Badge */
+.svm-culture-quote-badge {
+  position: absolute;
+  top: 42px;
+  right: 36px;
+  text-align: right;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.svm-culture-quote-text {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #7F0A1A;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.svm-culture-quote-line {
+  width: 44px;
+  height: 2px;
+  background: #C58A3A;
+  margin: 8px 0 0 auto;
+  border-radius: 1px;
+}
+
+/* Top Right Subtle Lotus Petals Watermark */
+.svm-culture-top-lotus-watermark {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55;
+}
+
+/* Header */
+.svm-culture-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.svm-culture-lotus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.svm-culture-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.svm-culture-eyebrow-line {
+  width: 36px;
+  height: 1.5px;
+  background: #C58A3A;
+}
+
+.svm-culture-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #C58A3A;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.svm-culture-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.01rem;
+  font-weight: 800;
+  line-height: 1.22;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.svm-culture-title-maroon {
+  color: #620D1A;
+}
+
+.svm-culture-title-gold {
+  color: #BA782C;
+}
+
+.svm-culture-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  color: #554D47;
+  margin: 0;
+  text-align: center;
+}
+
+.svm-culture-title-accent {
+  width: 46px;
+  height: 2.5px;
+  background: #C58A3A;
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+/* 6 Cards Grid */
+.svm-culture-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.svm-culture-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(220, 202, 185, 0.6);
+  box-shadow: 0 4px 18px rgba(80, 45, 15, 0.04);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.svm-culture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(127, 10, 26, 0.09);
+  border-color: rgba(197, 138, 58, 0.45);
+}
+
+/* Left Content Area */
+.svm-culture-card-content {
+  flex: 1 1 54%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.svm-culture-card-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FDF1EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  color: #7F0A1A;
+  flex-shrink: 0;
+  transition: transform 250ms ease;
+}
+
+.svm-culture-card:hover .svm-culture-card-icon-wrap {
+  transform: scale(1.1);
+}
+
+.svm-culture-card-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.14rem;
+  font-weight: 700;
+  color: #660D18;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.svm-culture-card-desc {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.77rem;
+  line-height: 1.48;
+  color: #000000;
+  margin: 0;
+}
+
+/* Right Visual with Soft Seamless Blend */
+.svm-culture-card-visual {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.svm-culture-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.svm-culture-card:hover .svm-culture-card-img {
+  transform: scale(1.05);
+}
+
+/* Soft Fade Mask from White Content to Image */
+.svm-culture-card-fade-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 52%;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.88) 32%, rgba(255, 255, 255, 0.35) 68%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Bottom Tagline */
+.svm-culture-bottom-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+.svm-culture-tagline-line {
+  flex: 0 1 120px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(197, 138, 58, 0.1), rgba(197, 138, 58, 0.65), rgba(197, 138, 58, 0.1));
+}
+
+.svm-culture-tagline-text {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: #4A4038;
+  white-space: nowrap;
+}
+
+/* Bottom Watermarks */
+.svm-culture-book-watermark {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 175px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.svm-culture-building-watermark {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 220px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.svm-culture-watermark-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bottom Crimson Wave with Gold Ribbon */
+.svm-culture-bottom-wave-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 32px;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.svm-culture-bottom-wave-svg {
+  width: 100%;
+  height: 32px;
+  display: block;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .svm-culture-motto-badge {
+    left: 16px;
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+
+  .svm-culture-quote-badge {
+    right: 16px;
+    transform: scale(0.9);
+    transform-origin: top right;
+  }
+
+  .svm-culture-cards-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .svm-culture-section {
+    padding: 48px 0 56px 0;
+  }
+
+  .svm-culture-motto-badge,
+  .svm-culture-quote-badge {
+    position: static;
+    transform: none;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .svm-culture-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 780px;
+    margin: 0 auto 32px auto;
+  }
+
+  .svm-culture-book-watermark,
+  .svm-culture-building-watermark {
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 640px) {
+  .svm-culture-section {
+    padding: 42px 0 48px 0;
+  }
+
+  .svm-culture-title {
+    font-size: 1.85rem;
+  }
+
+  .svm-culture-subtitle {
+    font-size: 0.86rem;
+  }
+
+  .svm-culture-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .svm-culture-card {
+    min-height: 140px;
+  }
+
+  .svm-culture-tagline-line {
+    display: none;
+  }
+
+  .svm-culture-tagline-text {
+    font-size: 0.86rem;
+  }
+
+  .svm-culture-book-watermark,
+  .svm-culture-building-watermark {
+    display: none;
+  }
+}
+
+/* ======================================================
+   SECTION 5: SCHOOL MANAGING COMMITTEE
+   ====================================================== */
+
+.svm-committee-section {
+  position: relative;
+  background: linear-gradient(180deg, #FAF7F2 0%, #FAF5EE 50%, #F5EFE4 100%);
+  padding: 62px 0 78px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(197, 138, 58, 0.15);
+}
+
+.svm-committee-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 0px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Side Foliage Watermarks */
+.svm-committee-watermark-left {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svm-committee-watermark-right {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header */
+.svm-committee-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.svm-committee-lotus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.svm-committee-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.svm-committee-eyebrow-line {
+  width: 36px;
+  height: 1.5px;
+  background: #C58A3A;
+}
+
+.svm-committee-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #C58A3A;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.svm-committee-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.22;
+  color: #801323;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.svm-committee-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2D3748;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+/* Pillars Pill Badge */
+.svm-committee-badge-pill {
+  background: #FAF0E6;
+  border: 1px solid rgba(197, 138, 58, 0.28);
+  border-radius: 9999px;
+  padding: 6px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(127, 10, 26, 0.03);
+}
+
+.svm-pillar-pill-word {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #8C2522;
+  letter-spacing: 0.02em;
+}
+
+.svm-pillar-pill-sep {
+  color: #C58A3A;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+/* Committee Table Card */
+.svm-committee-table-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(197, 138, 58, 0.35);
+  box-shadow: 0 8px 30px rgba(127, 10, 26, 0.06);
+  margin-top: 28px;
+}
+
+.svm-committee-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.svm-committee-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Header Cells */
+.svm-committee-table thead tr {
+  background-color: #801323;
+}
+
+.svm-committee-table th {
+  color: #FFFFFF;
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 13px 20px;
+  letter-spacing: 0.03em;
+}
+
+.svm-committee-table th:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.svm-th-sno,
+.svm-td-sno {
+  width: 12%;
+  text-align: center;
+}
+
+.svm-th-post,
+.svm-td-post {
+  width: 40%;
+  padding-left: 28px;
+}
+
+.svm-th-name,
+.svm-td-name {
+  width: 48%;
+  padding-left: 28px;
+}
+
+/* Body Rows */
+.svm-committee-table tbody tr:nth-child(odd) {
+  background-color: #FAF4EB;
+}
+
+.svm-committee-table tbody tr:nth-child(even) {
+  background-color: #FFFDFB;
+}
+
+.svm-committee-table tbody tr:hover {
+  background-color: #F4E8D7;
+  transition: background-color 150ms ease;
+}
+
+.svm-committee-table td {
+  padding: 10.5px 20px;
+  border-top: 1px solid rgba(197, 138, 58, 0.12);
+}
+
+.svm-committee-table td:not(:last-child) {
+  border-right: 1px solid rgba(197, 138, 58, 0.18);
+}
+
+.svm-td-sno {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.svm-td-post {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: #1E293B;
+  letter-spacing: 0.01em;
+}
+
+.svm-td-name {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #1E293B;
+  letter-spacing: 0.01em;
+}
+
+/* Bottom Crimson Wave with Gold Ribbon */
+.svm-committee-bottom-wave-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 32px;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.svm-committee-bottom-wave-svg {
+  width: 100%;
+  height: 32px;
+  display: block;
+}
+
+/* Responsive Media Queries for Committee */
+@media (max-width: 860px) {
+  .svm-committee-section {
+    padding: 50px 0 64px 0;
+  }
+
+  .svm-committee-title {
+    font-size: 2.1rem;
+  }
+
+  .svm-committee-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .svm-committee-table {
+    min-width: 600px;
+  }
+
+  .svm-committee-table th,
+  .svm-committee-table td {
+    padding: 9px 14px;
+  }
+
+  .svm-th-post,
+  .svm-td-post,
+  .svm-th-name,
+  .svm-td-name {
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .svm-committee-section {
+    padding: 42px 0 54px 0;
+  }
+
+  .svm-committee-title {
+    font-size: 1.75rem;
+  }
+
+  .svm-committee-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .svm-committee-badge-pill {
+    padding: 5px 16px;
+    gap: 10px;
+  }
+
+  .svm-pillar-pill-word {
+    font-size: 0.78rem;
+  }
+
+  .svm-committee-watermark-left,
+  .svm-committee-watermark-right {
+    display: none;
+  }
+}
+
+/* ======================================================
+   SECTION 6: OUR FUTURE VISION (The Saraswati Vidya Mandir of Tomorrow)
+   ====================================================== */
+
+.svm-vision-section {
+  position: relative;
+  background: linear-gradient(180deg, #FAF7F2 0%, #FAF5EE 50%, #F5EFE4 100%);
+  padding: 64px 0 74px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(197, 138, 58, 0.15);
+}
+
+.svm-vision-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 0px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Soft Botanical Background Watermarks */
+.svm-vision-watermark-left {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.svm-vision-watermark-right {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header */
+.svm-vision-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svm-vision-sprout-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.svm-vision-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.svm-vision-eyebrow-line {
+  width: 36px;
+  height: 1.5px;
+  background: #C58A3A;
+}
+
+.svm-vision-eyebrow-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #C58A3A;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.svm-vision-title {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 2.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.svm-vision-title-maroon {
+  color: #6A101C;
+  display: block;
+}
+
+.svm-vision-title-gold {
+  color: #C58A3A;
+  display: block;
+}
+
+/* Narrative Paragraphs */
+.svm-vision-narrative {
+  max-width: 860px;
+  margin: 0 auto 26px auto;
+  text-align: center;
+}
+
+.svm-vision-narrative p {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #4A4036;
+  margin: 0 0 14px 0;
+}
+
+/* Highlight Callout Box */
+.svm-vision-callout {
+  max-width: 840px;
+  margin: 0 auto 46px auto;
+  background: #FEF7EE;
+  border: 1px solid rgba(197, 138, 58, 0.28);
+  border-radius: 12px;
+  padding: 16px 28px 16px 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(127, 10, 26, 0.03);
+}
+
+.svm-vision-callout-line {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 18px;
+  width: 3px;
+  background: #801323;
+  border-radius: 2px;
+}
+
+.svm-vision-callout-text {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #6D111E;
+  margin: 0;
+  text-align: left;
+}
+
+/* 5 Vision Pillars Row */
+.svm-vision-pillars-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 44px auto;
+}
+
+.svm-vision-pillar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.svm-vision-pillar-divider {
+  width: 1px;
+  height: 70px;
+  background: linear-gradient(180deg, transparent 0%, rgba(197, 138, 58, 0.35) 50%, transparent 100%);
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.svm-vision-pillar-badge {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.svm-vision-pillar-item:hover .svm-vision-pillar-badge {
+  transform: scale(1.12);
+  box-shadow: 0 6px 18px rgba(127, 10, 26, 0.12);
+}
+
+.svm-pillar-badge-book {
+  background-color: #FDEBEB;
+}
+
+.svm-pillar-badge-bulb {
+  background-color: #FFF2DF;
+}
+
+.svm-pillar-badge-parents {
+  background-color: #FDF0EA;
+}
+
+.svm-pillar-badge-sprout {
+  background-color: #FEF2DE;
+}
+
+.svm-pillar-badge-star {
+  background-color: #FDEBED;
+}
+
+.svm-vision-pillar-title {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #660D18;
+  line-height: 1.35;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svm-vision-pillar-line {
+  display: block;
+}
+
+/* Centered Bottom Lotus & Tagline */
+.svm-vision-bottom-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.svm-vision-bottom-lotus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.svm-vision-bottom-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.svm-vision-tagline-rule {
+  width: 44px;
+  height: 1.5px;
+  background: #C58A3A;
+}
+
+.svm-vision-tagline-text {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7F0A1A;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .svm-vision-container {
+    padding: 0 16px;
+  }
+
+  .svm-vision-pillars-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 16px;
+  }
+
+  .svm-vision-pillar-item {
+    flex: 0 1 calc(33.33% - 16px);
+  }
+
+  .svm-vision-pillar-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .svm-vision-section {
+    padding: 46px 0 54px 0;
+  }
+
+  .svm-vision-title {
+    font-size: 1.95rem;
+  }
+
+  .svm-vision-narrative p {
+    font-size: 0.88rem;
+  }
+
+  .svm-vision-callout {
+    padding: 14px 18px 14px 26px;
+  }
+
+  .svm-vision-callout-text {
+    font-size: 0.92rem;
+  }
+
+  .svm-vision-pillar-item {
+    flex: 0 1 calc(50% - 16px);
+  }
+
+  .svm-vision-tagline-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  .svm-vision-tagline-rule {
+    width: 24px;
+  }
+
+  .svm-vision-watermark-left,
+  .svm-vision-watermark-right {
+    display: none;
+  }
+}

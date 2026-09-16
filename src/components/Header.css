@@ -27,6 +27,8 @@
   min-height: var(--navbar-height, 88px);
   padding-top: var(--space-2);
   padding-bottom: var(--space-2);
+
+
 }
 
 /* ======================================================
@@ -76,7 +78,7 @@
 
 .svm-school-name {
   font-family: var(--font-heading);
-  font-size: 1.38rem;
+  font-size: 1.18rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
   line-height: 1.15;
@@ -94,7 +96,7 @@
 
 .svm-location-text {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.52rem;
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.09em;
   color: var(--color-text-gold);
@@ -125,12 +127,13 @@
 .svm-navbar {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .svm-nav-list {
   display: flex;
   align-items: center;
-  gap: var(--navbar-item-gap, 1.85rem);
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -138,6 +141,7 @@
 
 .svm-nav-item {
   position: relative;
+  white-space: nowrap;
 }
 
 .svm-nav-link {
@@ -146,12 +150,13 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--font-body);
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   font-weight: var(--font-weight-medium);
   color: var(--navbar-text);
   text-decoration: none;
   padding: var(--space-2) 0;
   transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .svm-nav-link:hover {
@@ -159,21 +164,66 @@
 }
 
 .svm-nav-link.active {
-  color: var(--color-primary);
+  color: var(--color-secondary-dark, #A96F24);
   font-weight: var(--font-weight-semibold);
 }
 
-/* Active Indicator Line */
+/* Active Indicator - small subtle dot like in reference image */
 .svm-active-indicator {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  width: var(--navbar-active-line-width, 36px);
-  height: var(--navbar-active-line-height, 3px);
-  background-color: var(--color-secondary);
-  border-radius: var(--radius-sm);
-  transition: width var(--transition-normal);
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-secondary, #C58A3A);
+  border-radius: 50%;
+}
+
+/* ======================================================
+   ADMISSION BUTTON (AT THE LAST OF NAVBAR)
+   ====================================================== */
+
+.svm-nav-admission-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #722230;
+  /* Deep rich wine/maroon matching reference image */
+  color: #FFFFFF !important;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.7rem 1.65rem;
+  border-radius: 9999px;
+  /* Pill capsule shape */
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.015em;
+  box-shadow: 0 4px 12px rgba(114, 34, 48, 0.22);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.svm-nav-admission-btn:hover {
+  background-color: #5A1623;
+  color: #FFFFFF !important;
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(90, 22, 35, 0.35);
+}
+
+.svm-nav-admission-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(90, 22, 35, 0.25);
+}
+
+.svm-nav-admission-btn.active {
+  background-color: #5A1623;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #722230, 0 6px 18px rgba(90, 22, 35, 0.3);
 }
 
 /* ======================================================
@@ -270,15 +320,51 @@
   background-color: var(--color-secondary);
 }
 
+/* Mobile Admission Pill Button */
+.svm-mobile-admission-wrap {
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border);
+}
+
+.svm-mobile-admission-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #722230;
+  color: #FFFFFF !important;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(114, 34, 48, 0.22);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.svm-mobile-admission-btn:hover,
+.svm-mobile-admission-btn:active {
+  background-color: #5A1623;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(90, 22, 35, 0.32);
+}
+
 /* ======================================================
    RESPONSIVE BREAKPOINTS
    ====================================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1160px) {
+  .svm-navbar {
+    gap: 1.25rem;
+  }
+
   .svm-nav-list {
     gap: 1.25rem;
   }
-  
+
   .svm-nav-link {
     font-size: 0.9rem;
   }
@@ -286,9 +372,14 @@
   .svm-school-name {
     font-size: 1.2rem;
   }
+
+  .svm-nav-admission-btn {
+    padding: 0.65rem 1.35rem;
+    font-size: 0.88rem;
+  }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 960px) {
   .svm-navbar {
     display: none;
   }
@@ -308,6 +399,7 @@
     opacity: 0;
     transform: translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

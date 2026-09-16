@@ -17,7 +17,7 @@
 .svm-gallery-hero {
   position: relative;
   width: 100%;
-  min-height: 440px;
+  min-height: 380px;
   background-color: #FBF8F2;
   background-image:
     linear-gradient(to right,
@@ -82,7 +82,7 @@
   font-size: 0.84rem;
   font-weight: 500;
   color: #6B7280;
-  margin-bottom: 1.25rem;
+  margin-bottom: 12px;
 }
 
 .svm-gallery-crumb-link {
