@@ -5,7 +5,7 @@ import schoolLogo from '../assets/school-logo.png';
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About Us' },
-  { id: 'academics', label: 'Our Philosophy' },
+  { id: 'academics', label: 'Academics' },
   { id: 'facilities', label: 'Facilities' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'contact', label: 'Contact' },

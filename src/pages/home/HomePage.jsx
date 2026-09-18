@@ -14,54 +14,66 @@ import studentSmartClassImg from '../../assets/smart-class-main.png';
 import studentSportsImg from '../../assets/sports-football.jpg';
 import studentYogaImg from '../../assets/gallery-yoga.jpg';
 import studentCulturalImg from '../../assets/gallery-item-7.jpg';
-import facilitySmartClassroom from '../../assets/facility-smart-classroom.png';
-import facilityAiRobotics from '../../assets/facility-ai-robotics.png';
-import facilityScienceLab from '../../assets/facility-science-lab.png';
-import facilitySportsYoga from '../../assets/facility-sports-yoga.png';
-import facilityLibrary from '../../assets/facility-library.png';
-import facilityAssemblyHall from '../../assets/facility-assembly-hall.png';
-import facilityMedicalCare from '../../assets/facility-medical-care.png';
-import facilityTransport from '../../assets/facility-transport.png';
+import facilitySmartClassroom from '../../assets/facility-smart-classroom.jpg';
+import facilityAiRobotics from '../../assets/facility-ai-robotics.jpg';
+import facilityScienceLab from '../../assets/facility-science-lab.jpg';
+import facilitySportsYoga from '../../assets/facility-sports-yoga.jpg';
+import facilityLibrary from '../../assets/facility-library.jpg';
+
+import facilityComputerLab from '../../assets/facility-computer-lab.jpg';
+import facilityMedicalCare from '../../assets/facility-medical-care.jpg';
+import facilityTransport from '../../assets/facility-transport.jpg';
 
 const homeFacilities = [
   {
     id: 'smart-classroom',
     title: 'Smart Classroom',
+    description: 'Interactive digital learning environment',
     image: facilitySmartClassroom,
   },
   {
     id: 'ai-robotics',
     title: 'AI & Robotics Learning',
+    description: 'Hands-on coding, innovation and robotics lab',
     image: facilityAiRobotics,
   },
   {
     id: 'science-lab',
     title: 'Science Laboratory',
+    description: 'Modern physics, chemistry & biology labs',
     image: facilityScienceLab,
   },
-  {
-    id: 'sports-yoga',
-    title: 'Sports & Yoga',
-    image: facilitySportsYoga,
+   {
+    id: 'computer-lab',
+    title: 'Computer Lab',
+    description: 'Daily morning prayer and cultural gatherings',
+    image: facilityComputerLab,
   },
+
   {
     id: 'library',
     title: 'Library',
+    description: 'Curated collection of books & reading hall',
     image: facilityLibrary,
   },
+ 
+
   {
-    id: 'assembly-hall',
-    title: 'Assembly Hall',
-    image: facilityAssemblyHall,
+    id: 'sports-yoga',
+    title: 'Sports & Yoga',
+    description: 'Physical fitness, athletics and mindfulness',
+    image: facilitySportsYoga,
   },
   {
     id: 'medical-care',
-    title: 'Medical Care Support',
+    title: 'Medical Care ',
+    description: 'First aid, regular checkups and infirmary care',
     image: facilityMedicalCare,
   },
   {
     id: 'transport',
     title: 'Transport Facilities',
+    description: 'Safe GPS-tracked school bus routes',
     image: facilityTransport,
   },
 ];
@@ -289,31 +301,37 @@ const HomePage = () => {
           HERO SECTION (USING EXACT COMPOSITE HERO BACKGROUND)
           ====================================================== */}
       <section className="svm-hero-section">
-
-        {/* Floating Calligraphy Quote in the Sky
-        <div className="svm-hero-sky-quote" aria-hidden="true">
-          <p className="svm-sky-quote-line1">A Legacy of Learning</p>
-          <p className="svm-sky-quote-line2">A Future of Possibilities.</p>
-        </div> */}
-
-        <div className="container svm-hero-container">
+                <div className="hero-overlay"></div>   
+               <div className="container svm-hero-container">
 
           {/* Left Column: Content & Typography */}
           <div className="svm-hero-content">
 
             {/* Shloka & Eyebrow */}
             <div className="svm-hero-shloka-wrap">
-              <p className="svm-hero-shloka">ॐ सरस्वती नमस्तुभ्यं, वरदे कामरूपिणि।</p>
-              <p className="svm-hero-eyebrow">A BRIGHTER TOMORROW BEGINS HERE</p>
+              <p className="svm-hero-shloka">
+                <span>ॐ सरस्वती नमस्तुभ्यं,</span>
+                <span className="svm-hero-shloka-line2"> वरदे कामरूपिणि।</span>
+              </p>
+              <p className="svm-hero-eyebrow">
+                <span>A BRIGHTER</span>
+                <span className="svm-hero-eyebrow-line2"> TOMORROW BEGINS HERE</span>
+              </p>
             </div>
 
             {/* Main Headline */}
             <h1 className="svm-hero-title">
-              <span className="svm-title-black">Shaping Young Minds</span>
-              <span className="svm-title-maroon">Through Knowledge,</span>
+              <span className="svm-title-black">
+                <span className="svm-title-word">Shaping</span>{' '}
+                <span className="svm-title-word">Young Minds</span>
+              </span>
+              <span className="svm-title-maroon">
+                <span className="svm-title-word">Through</span>{' '}
+                <span className="svm-title-word">Knowledge,</span>
+              </span>
               <span className="svm-title-maroon svm-title-relative">
-                Values & Character
-               
+                <span className="svm-title-word">Values &amp;</span>{' '}
+                <span className="svm-title-word">Character</span>
               </span>
             </h1>
 
@@ -342,7 +360,7 @@ const HomePage = () => {
               {/* Highlight 1: Nursery to Class Xth */}
               <div className="svm-highlight-item">
                 <div className="svm-highlight-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C58A3A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                     <path d="M6 12v5c3 3 9 3 12 0v-5" />
                   </svg>
@@ -358,7 +376,7 @@ const HomePage = () => {
               {/* Highlight 2: 5 Pillars of Development */}
               <div className="svm-highlight-item">
                 <div className="svm-highlight-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C58A3A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="4" y1="20" x2="20" y2="20" />
                     <line x1="4" y1="4" x2="20" y2="4" />
                     <line x1="6" y1="4" x2="6" y2="20" />
@@ -368,7 +386,10 @@ const HomePage = () => {
                 </div>
                 <div className="svm-highlight-text">
                   <span className="svm-highlight-main">5</span>
-                  <span className="svm-highlight-sub">Pillars of Development</span>
+                  <span className="svm-highlight-sub">
+                    <span>Pillars of</span>
+                    <span className="svm-sub-break"> Development</span>
+                  </span>
                 </div>
               </div>
 
@@ -377,14 +398,17 @@ const HomePage = () => {
               {/* Highlight 3: CBSE Affiliated Curriculum */}
               <div className="svm-highlight-item">
                 <div className="svm-highlight-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C58A3A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                   </svg>
                 </div>
                 <div className="svm-highlight-text">
                   <span className="svm-highlight-main">CBSE</span>
-                  <span className="svm-highlight-sub">Affiliated Curriculum</span>
+                  <span className="svm-highlight-sub">
+                    <span>Affiliated</span>
+                    <span className="svm-sub-break"> Curriculum</span>
+                  </span>
                 </div>
               </div>
 
@@ -648,7 +672,13 @@ const HomePage = () => {
                     className="svm-home-facility-img"
                     loading="lazy"
                   />
-                  <span className="sr-only">{item.title}</span>
+                  <div className="svm-home-facility-overlay" aria-hidden="true" />
+                  <div className="svm-home-facility-caption">
+                    <h3 className="svm-home-facility-title">{item.title}</h3>
+                    {item.description && (
+                      <p className="svm-home-facility-desc">{item.description}</p>
+                    )}
+                  </div>
                 </div>
               </a>
             ))}

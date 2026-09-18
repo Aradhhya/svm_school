@@ -1379,8 +1379,9 @@
 
 /* Left Content Area */
 .svm-culture-card-content {
-  flex: 1 1 54%;
-  padding: 20px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 20px 10px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1454,8 +1455,8 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 52%;
-  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.88) 32%, rgba(255, 255, 255, 0.35) 68%, transparent 100%);
+  width: 62%;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.45) 72%, transparent 100%);
   pointer-events: none;
 }
 

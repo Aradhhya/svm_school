@@ -756,19 +756,11 @@ const About = () => {
 
         {/* Top/Side Decorative Foliage Watermarks */}
         <div className="svm-committee-watermark-left" aria-hidden="true">
-          <svg viewBox="0 0 160 160" width="220" height="220" fill="none" opacity="0.32">
-            <path d="M20 140C20 80 60 40 140 20C120 80 80 120 20 140Z" fill="#C58A3A" />
-            <path d="M40 140C40 95 70 65 130 50" stroke="#C58A3A" strokeWidth="1.5" />
-            <path d="M60 140C60 110 80 90 120 80" stroke="#C58A3A" strokeWidth="1.2" />
-          </svg>
+         
         </div>
 
         <div className="svm-committee-watermark-right" aria-hidden="true">
-          <svg viewBox="0 0 160 160" width="220" height="220" fill="none" opacity="0.32">
-            <path d="M140 140C140 80 100 40 20 20C40 80 80 120 140 140Z" fill="#C58A3A" />
-            <path d="M120 140C120 95 90 65 30 50" stroke="#C58A3A" strokeWidth="1.5" />
-            <path d="M100 140C100 110 80 90 40 80" stroke="#C58A3A" strokeWidth="1.2" />
-          </svg>
+         
         </div>
 
         <div className="container svm-committee-container">
@@ -870,17 +862,11 @@ const About = () => {
         
         {/* Soft Botanical Background Watermarks */}
         <div className="svm-vision-watermark-left" aria-hidden="true">
-          <svg viewBox="0 0 160 160" width="180" height="180" fill="none" opacity="0.22">
-            <path d="M20 140C20 80 60 40 140 20C120 80 80 120 20 140Z" fill="#C58A3A" />
-            <path d="M40 140C40 95 70 65 130 50" stroke="#C58A3A" strokeWidth="1.5" />
-          </svg>
+          
         </div>
 
         <div className="svm-vision-watermark-right" aria-hidden="true">
-          <svg viewBox="0 0 160 160" width="180" height="180" fill="none" opacity="0.22">
-            <path d="M140 140C140 80 100 40 20 20C40 80 80 120 140 140Z" fill="#C58A3A" />
-            <path d="M120 140C120 95 90 65 30 50" stroke="#C58A3A" strokeWidth="1.5" />
-          </svg>
+          
         </div>
 
         <div className="container svm-vision-container">

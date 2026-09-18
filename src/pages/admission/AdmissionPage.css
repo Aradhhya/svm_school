@@ -22,7 +22,7 @@
     url('../../assets/admission-hero.jpg');
   background-position: right center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-border-light, #F0E6D7);
@@ -63,7 +63,7 @@
   font-size: 0.88rem;
   font-weight: 500;
   color: #6B7280;
-  margin-bottom: 1.25rem;
+  margin-bottom: 12px;
 }
 
 .svm-breadcrumb-home {
@@ -642,8 +642,9 @@
 }
 
 .svm-eligibility-header {
-  text-align: left;
-  margin-bottom: 2.75rem;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  max-width: 780px;
 }
 
 .svm-eligibility-title {
@@ -659,34 +660,100 @@
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 1.05rem;
   color: #4B5563;
-  margin: 0;
+  margin: 0 auto;
   max-width: 680px;
   line-height: 1.6;
 }
 
-/* Main 2-Column Grid */
-.svm-eligibility-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 0.85fr;
-  gap: 2.5rem;
-  align-items: start;
+/* Full-Width Eligibility Wrapper & Card (Compact Height) */
+.svm-eligibility-wrapper {
+  width: 100%;
+  max-width: 100%;
 }
 
 .svm-eligibility-card {
-  padding: 2.25rem 2.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem 2.25rem;
+  border-radius: 20px;
+  border: 1px solid #ECE3D7;
+  box-shadow: 0 8px 30px rgba(70, 40, 20, 0.05);
+  background: #FFFFFF;
+}
+
+.svm-eligibility-card .svm-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #F3EDE3;
+}
+
+.svm-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.svm-eligibility-card .svm-header-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+.svm-eligibility-card .svm-header-icon-box svg {
+  width: 21px;
+  height: 21px;
+}
+
+.svm-eligibility-card .svm-card-title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.svm-eligibility-card .svm-card-badge-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
 }
 
 .svm-icon-cap {
   background-color: #FDF0E9;
 }
 
-/* Criteria Table */
+.svm-eligibility-session-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #FBF4E9;
+  border: 1px solid rgba(197, 138, 58, 0.35);
+  color: #78111B;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 1px 4px rgba(120, 17, 27, 0.04);
+}
+
+.svm-eligibility-session-badge .svm-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #27AE60;
+  display: inline-block;
+}
+
+/* Criteria Table (Compact Rows) */
 .svm-criteria-table-wrap {
-  border: 1px solid #EDE5D8;
+  border: 1px solid #EAE1D3;
   border-radius: 14px;
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.85rem;
   background: #FFFFFF;
+  box-shadow: 0 1px 6px rgba(60, 20, 25, 0.02);
 }
 
 .svm-criteria-table {
@@ -702,45 +769,114 @@
 }
 
 .svm-criteria-table th {
-  padding: 12px 14px;
-  font-size: 0.86rem;
+  padding: 8px 18px;
+  font-size: 0.82rem;
   font-weight: 600;
-  line-height: 1.35;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
   vertical-align: middle;
   border: none;
+  white-space: nowrap;
+}
+
+.svm-criteria-table th.th-class {
+  padding-left: 22px;
+  width: 18%;
+}
+
+.svm-criteria-table th.th-age {
+  width: 18%;
+}
+
+.svm-criteria-table th.th-qual {
+  width: 22%;
+}
+
+.svm-criteria-table th.th-nature {
+  width: 20%;
+}
+
+.svm-criteria-table th.th-subject {
+  padding-right: 22px;
+  width: 22%;
 }
 
 .svm-criteria-table td {
-  padding: 11px 14px;
-  font-size: 0.88rem;
+  padding: 6px 18px;
+  font-size: 0.85rem;
   color: #374151;
-  border-bottom: 1px solid #F2ECE1;
+  border-bottom: 1px solid #F3EDE3;
   vertical-align: middle;
+  line-height: 1.35;
+}
+
+.svm-criteria-table tbody tr:nth-child(even) {
+  background-color: #FAF8F5;
+}
+
+.svm-criteria-table tbody tr:hover {
+  background-color: #F6EFE5;
+  transition: background-color 0.15s ease;
 }
 
 .svm-criteria-table tbody tr:last-child td {
   border-bottom: none;
 }
 
-.svm-criteria-table tbody tr:hover {
-  background-color: #FDFBF8;
-}
-
 .svm-criteria-table .td-class {
+  padding-left: 22px;
   color: #1F2937;
   font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.svm-criteria-table .td-age {
+  color: #1F2937;
+}
+
+.svm-criteria-table .svm-age-text {
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.svm-criteria-table .td-qual {
+  font-weight: 500;
+  color: #374151;
 }
 
 .svm-criteria-table .td-dash {
   color: #9CA3AF;
-  text-align: center;
+  font-weight: 500;
 }
 
 .svm-criteria-table .td-nature {
   color: #4B5563;
 }
 
+.svm-criteria-table .svm-nature-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+.svm-criteria-table .svm-nature-viva {
+  background-color: #EFF8F4;
+  color: #1E7E55;
+  border: 1px solid #C4E8D7;
+}
+
+.svm-criteria-table .svm-nature-written {
+  background-color: #F8F3FC;
+  color: #6C3483;
+  border: 1px solid #E2D1F3;
+}
+
 .svm-criteria-table .td-subject {
+  padding-right: 22px;
   font-size: 0.82rem;
   color: #4B5563;
   font-weight: 500;
@@ -748,135 +884,37 @@
 
 .svm-criteria-note {
   margin-top: 0;
+  padding: 8px 14px;
 }
 
-/* Right Sidebar: Editorial composite & Pillars */
-.svm-eligibility-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 2.25rem;
+.svm-criteria-note .svm-note-label {
+  font-size: 0.82rem;
 }
 
-/* Quote + Student Photo Banner */
-.svm-quote-visual-banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  min-height: 230px;
-}
-
-.svm-quote-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.svm-quote-mark {
-  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
-  font-size: 2.5rem;
-  color: #D97706;
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-
-.svm-quote-heading {
-  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
-  font-style: italic;
-  font-size: 1.42rem;
-  font-weight: 600;
-  color: #1F2937;
-  line-height: 1.38;
-  margin: 0 0 1rem 0;
-}
-
-.svm-quote-underline {
-  width: 38px;
-  height: 2.5px;
-  background-color: #C58A3A;
-  border-radius: 2px;
-}
-
-.svm-quote-img-container {
-  flex: 1.25;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(60, 35, 15, 0.08);
-  border: 1px solid #ECE3D7;
-}
-
-.svm-quote-student-img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  object-position: 50% 15%;
-  display: block;
-}
-
-/* Pillars List */
-.svm-pillars-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.svm-pillar-item {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 8px 4px;
-}
-
-.svm-pillar-icon-badge {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background-color: #FDF0E9;
-  border: 1.5px solid #F5DED8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.svm-pillar-item:hover .svm-pillar-icon-badge {
-  transform: scale(1.08);
-  background-color: #FDE8DE;
-}
-
-.svm-pillar-text {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.svm-pillar-title {
-  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #680815;
-  margin: 0;
-}
-
-.svm-pillar-sub {
-  font-family: var(--font-body, "Inter", sans-serif);
-  font-size: 0.88rem;
-  color: #6B7280;
-  margin: 0;
+.svm-criteria-note .svm-note-text {
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 /* Responsive Styles for Section 3 */
-@media (max-width: 1080px) {
-  .svm-eligibility-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 900px) {
+  .svm-eligibility-card {
+    padding: 2rem 1.5rem;
   }
 
-  .svm-quote-visual-banner {
-    max-width: 600px;
+  .svm-criteria-table th,
+  .svm-criteria-table td {
+    padding: 12px 14px;
+  }
+
+  .svm-criteria-table th.th-class,
+  .svm-criteria-table .td-class {
+    padding-left: 16px;
+  }
+
+  .svm-criteria-table th.th-subject,
+  .svm-criteria-table .td-subject {
+    padding-right: 16px;
   }
 }
 
@@ -889,18 +927,14 @@
     font-size: 2rem;
   }
 
-  .svm-quote-visual-banner {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .svm-quote-student-img {
-    height: 190px;
+  .svm-eligibility-card {
+    padding: 1.5rem 1rem;
+    border-radius: 18px;
   }
 
   .svm-criteria-table th,
   .svm-criteria-table td {
-    padding: 10px 10px;
+    padding: 10px 12px;
     font-size: 0.82rem;
   }
 }
@@ -1036,15 +1070,15 @@
 
 .svm-form-header {
   background: linear-gradient(135deg, #78111B 0%, #8E1624 100%);
-  padding: 1.75rem 2.25rem;
+  padding: 1.25rem 2rem;
   display: flex;
   align-items: center;
-  gap: 1.15rem;
+  gap: 1rem;
 }
 
 .svm-form-header-icon {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
   display: flex;
@@ -1061,7 +1095,7 @@
 
 .svm-form-header-title {
   font-family: var(--font-heading, "Playfair Display", Georgia, serif);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #FFFFFF;
   margin: 0;
@@ -1079,7 +1113,7 @@
 
 /* Form Body */
 .svm-form-body {
-  padding: 2.25rem 2.25rem 2rem 2.25rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
 .svm-form-success-alert {
@@ -1099,8 +1133,8 @@
 .svm-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .svm-field-group {
@@ -1110,7 +1144,7 @@
 }
 
 .svm-field-full {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .svm-form-label {
@@ -1168,7 +1202,7 @@
   background: #FFFFFF;
   border: 1px solid #E5E7EB;
   border-radius: 10px;
-  padding: 11px 14px 11px 40px;
+  padding: 9px 14px 9px 40px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   outline: none;
 }
@@ -1206,8 +1240,8 @@
 }
 
 .svm-form-textarea {
-  min-height: 85px;
-  padding-top: 12px;
+  min-height: 70px;
+  padding-top: 10px;
   resize: vertical;
 }
 
@@ -1222,7 +1256,7 @@
   color: #FFFFFF;
   border: none;
   border-radius: 10px;
-  padding: 14px 24px;
+  padding: 12px 24px;
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 1rem;
   font-weight: 600;
@@ -1252,7 +1286,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 1.25rem;
+  margin-top: 0.85rem;
   font-family: var(--font-body, "Inter", sans-serif);
   font-size: 0.78rem;
   color: #6B7280;

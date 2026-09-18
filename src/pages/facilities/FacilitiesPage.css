@@ -1730,11 +1730,11 @@
 }
 
 .svm-sports-media .svm-dual-img-frame {
-  width: calc(100% - 120px);
-  border-radius: 20px 0 0 20px;
+  width: 160%;
+  border-radius: 20px 20px 20px 20px;
 }
 
-.svm-sports-maroon-banner {
+/* .svm-sports-maroon-banner {
   width: 120px;
   background-color: #680815;
   border-radius: 0 20px 20px 0;
@@ -1746,7 +1746,7 @@
   text-align: center;
   position: relative;
   flex-shrink: 0;
-}
+} */
 
 .svm-sports-icon-white {
   width: 44px;

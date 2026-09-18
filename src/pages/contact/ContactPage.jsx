@@ -358,20 +358,7 @@ const ContactPage = () => {
             <div className="svm-faq-visual-column">
               <div className="svm-faq-visual-card">
                 
-                {/* Left Vertical Stamp / Brand Slogan */}
-                <div className="svm-faq-brand-stamp">
-                  <div className="svm-stamp-lotus-icon">
-                    <svg viewBox="0 0 40 40" width="34" height="34" fill="none" stroke="#C58A3A" strokeWidth="1.8">
-                      <path d="M20 6C20 18, 6 22, 2 34C16 34, 19 26, 20 20C21 26, 24 34, 38 34C34 22, 20 18, 20 6Z" fill="#F4EADB" opacity="0.4" />
-                      <path d="M20 12C20 22, 11 25, 8 34C17 34, 19 28, 20 24C21 28, 23 34, 32 34C29 25, 20 22, 20 12Z" />
-                    </svg>
-                  </div>
-                  <div className="svm-stamp-text">
-                    <span>LEARN</span>
-                    <span>GROW</span>
-                    <span>SERVE</span>
-                  </div>
-                </div>
+                
 
                 {/* Main Books & Classroom Photograph */}
                 <div className="svm-faq-img-wrap">
@@ -456,13 +443,13 @@ const ContactPage = () => {
                     </div>
                     <span className="svm-faq-toggle-icon">{openFaqIndex === 0 ? '−' : '+'}</span>
                   </button>
-                  {openFaqIndex === 0 && (
+                  <div className="svm-faq-item-body-wrapper">
                     <div className="svm-faq-item-body">
                       <p>
                         Our campus is located at Baldev Sahay Path, Kadamkuan, Patna, Bihar – 800003. We are conveniently situated in the heart of the city with easy access from major transit hubs.
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 {/* Item 2 */}
@@ -484,13 +471,13 @@ const ContactPage = () => {
                     </div>
                     <span className="svm-faq-toggle-icon">{openFaqIndex === 1 ? '−' : '+'}</span>
                   </button>
-                  {openFaqIndex === 1 && (
+                  <div className="svm-faq-item-body-wrapper">
                     <div className="svm-faq-item-body">
                       <p>
                         School hours are Monday through Saturday, from 7:30 AM to 2:00 PM. The administrative office is open during the same hours. Sundays and public holidays remain closed.
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 {/* Item 3 */}
@@ -514,13 +501,13 @@ const ContactPage = () => {
                     </div>
                     <span className="svm-faq-toggle-icon">{openFaqIndex === 2 ? '−' : '+'}</span>
                   </button>
-                  {openFaqIndex === 2 && (
+                  <div className="svm-faq-item-body-wrapper">
                     <div className="svm-faq-item-body">
                       <p>
                         You can schedule a visit by filling out the inquiry form above, calling our reception desk at +91 9006502899, or visiting the school during morning office hours.
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 {/* Item 4 */}
@@ -542,13 +529,13 @@ const ContactPage = () => {
                     </div>
                     <span className="svm-faq-toggle-icon">{openFaqIndex === 3 ? '−' : '+'}</span>
                   </button>
-                  {openFaqIndex === 3 && (
+                  <div className="svm-faq-item-body-wrapper">
                     <div className="svm-faq-item-body">
                       <p>
                         You can contact our Admission Counsellor directly via mobile at +91 9006502899 or email us at saraswatividyamandir1977@gmail.com for entrance syllabi and criteria.
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 {/* Item 5 */}
@@ -572,13 +559,13 @@ const ContactPage = () => {
                     </div>
                     <span className="svm-faq-toggle-icon">{openFaqIndex === 4 ? '−' : '+'}</span>
                   </button>
-                  {openFaqIndex === 4 && (
+                  <div className="svm-faq-item-body-wrapper">
                     <div className="svm-faq-item-body">
                       <p>
                         Yes, safe and supervised school transport facilities are available covering major routes across Patna and surrounding localities.
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 {/* Item 6 */}
@@ -599,13 +586,13 @@ const ContactPage = () => {
                     </div>
                     <span className="svm-faq-toggle-icon">{openFaqIndex === 5 ? '−' : '+'}</span>
                   </button>
-                  {openFaqIndex === 5 && (
+                  <div className="svm-faq-item-body-wrapper">
                     <div className="svm-faq-item-body">
                       <p>
                         The school is easily reachable by city buses, auto-rickshaws, and e-rickshaws with stops near Kadamkuan / Rajendra Nagar terminal.
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
 
               </div>

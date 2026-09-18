@@ -408,21 +408,28 @@ const AdmissionPage = () => {
             </p>
           </div>
 
-          {/* Main Grid: Left Table Card + Right Editorial Column */}
-          <div className="svm-eligibility-grid">
+          {/* Main Full-Width Table Card */}
+          <div className="svm-eligibility-wrapper">
 
-            {/* ---------------- LEFT: CLASS-WISE TABLE CARD ---------------- */}
+            {/* CLASS-WISE TABLE CARD */}
             <div className="svm-card svm-eligibility-card">
               <div className="svm-card-header">
-                <div className="svm-header-icon-box svm-icon-cap">
-                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#C0392B" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
-                  </svg>
+                <div className="svm-card-header-left">
+                  <div className="svm-header-icon-box svm-icon-cap">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#C0392B" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                    </svg>
+                  </div>
+                  <div className="svm-header-text">
+                    <h3 className="svm-card-title">Class-wise Eligibility Criteria</h3>
+                    <span className="svm-card-badge-label">FIND THE RIGHT CLASS FOR YOUR CHILD</span>
+                  </div>
                 </div>
-                <div className="svm-header-text">
-                  <h3 className="svm-card-title">Class-wise Eligibility Criteria</h3>
-                  <span className="svm-card-badge-label">FIND THE RIGHT CLASS FOR YOUR CHILD</span>
+
+                <div className="svm-eligibility-session-badge">
+                  <span className="svm-badge-dot"></span>
+                  <span>Academic Session 2026–2027</span>
                 </div>
               </div>
 
@@ -434,86 +441,86 @@ const AdmissionPage = () => {
                       <th className="th-class">Class</th>
                       <th className="th-age">Minimum Age<br />as on 1st April</th>
                       <th className="th-qual">Academic Qualification</th>
-                      <th className="th-nature">Nature</th>
+                      <th className="th-nature">Nature of Test</th>
                       <th className="th-subject">Subject of Test</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td className="td-class font-bold">Arun (Nur.)</td>
-                      <td className="td-age">3 Years</td>
+                      <td className="td-age"><span className="svm-age-text">3 Years</span></td>
                       <td className="td-dash">-</td>
-                      <td className="td-nature">Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-viva">Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Uday (LKG)</td>
-                      <td className="td-age">4 Years</td>
+                      <td className="td-age"><span className="svm-age-text">4 Years</span></td>
                       <td className="td-dash">-</td>
-                      <td className="td-nature">Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-viva">Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Prabhat (UKG)</td>
-                      <td className="td-age">5 Years</td>
+                      <td className="td-age"><span className="svm-age-text">5 Years</span></td>
                       <td className="td-dash">-</td>
-                      <td className="td-nature">Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-viva">Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class I</td>
-                      <td className="td-age">6 Years</td>
+                      <td className="td-age"><span className="svm-age-text">6 Years</span></td>
                       <td className="td-dash">-</td>
-                      <td className="td-nature">Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-viva">Viva</span></td>
                       <td className="td-subject">Hindi, Eng., Math &amp; G.S.</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class II</td>
-                      <td className="td-age">7 Years</td>
+                      <td className="td-age"><span className="svm-age-text">7 Years</span></td>
                       <td className="td-qual">1st Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class III</td>
-                      <td className="td-age">8 Years</td>
+                      <td className="td-age"><span className="svm-age-text">8 Years</span></td>
                       <td className="td-qual">IInd Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class IV</td>
-                      <td className="td-age">9 Years</td>
+                      <td className="td-age"><span className="svm-age-text">9 Years</span></td>
                       <td className="td-qual">IIIrd Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class V</td>
-                      <td className="td-age">10 Years</td>
+                      <td className="td-age"><span className="svm-age-text">10 Years</span></td>
                       <td className="td-qual">IVth Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class VI</td>
-                      <td className="td-age">11 Years</td>
+                      <td className="td-age"><span className="svm-age-text">11 Years</span></td>
                       <td className="td-qual">Vth Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class VII</td>
-                      <td className="td-age">12 Years</td>
+                      <td className="td-age"><span className="svm-age-text">12 Years</span></td>
                       <td className="td-qual">VIth Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                     <tr>
                       <td className="td-class font-bold">Class VIII</td>
-                      <td className="td-age">13 Years</td>
+                      <td className="td-age"><span className="svm-age-text">13 Years</span></td>
                       <td className="td-qual">VIIth Std. Pass</td>
-                      <td className="td-nature">Written and Viva</td>
+                      <td className="td-nature"><span className="svm-nature-pill svm-nature-written">Written and Viva</span></td>
                       <td className="td-dash">-</td>
                     </tr>
                   </tbody>
@@ -535,83 +542,6 @@ const AdmissionPage = () => {
                     The candidate seeking admission have to appear in the Entrance Test according to the above criteria.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* ---------------- RIGHT: EDITORIAL & FEATURES ---------------- */}
-            <div className="svm-eligibility-sidebar">
-
-              {/* Top Composite: Quote + Student Photo */}
-              <div className="svm-quote-visual-banner">
-                <div className="svm-quote-content">
-                  <div className="svm-quote-mark" aria-hidden="true">“</div>
-                  <h4 className="svm-quote-heading">
-                    The right<br />
-                    beginning builds<br />
-                    a brighter<br />
-                    tomorrow.
-                  </h4>
-                  <div className="svm-quote-underline" aria-hidden="true"></div>
-                </div>
-
-                <div className="svm-quote-img-container">
-                  <img 
-                    src="/src/assets/eligibility-student.jpg" 
-                    alt="Student with books" 
-                    className="svm-quote-student-img" 
-                  />
-                </div>
-              </div>
-
-              {/* 3 Value Pillars */}
-              <div className="svm-pillars-list">
-
-                {/* Pillar 1 */}
-                <div className="svm-pillar-item">
-                  <div className="svm-pillar-icon-badge">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#78111B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                  </div>
-                  <div className="svm-pillar-text">
-                    <h5 className="svm-pillar-title">Age Appropriate Learning</h5>
-                    <p className="svm-pillar-sub">Nurturing growth at every stage.</p>
-                  </div>
-                </div>
-
-                {/* Pillar 2 */}
-                <div className="svm-pillar-item">
-                  <div className="svm-pillar-icon-badge">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#78111B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                    </svg>
-                  </div>
-                  <div className="svm-pillar-text">
-                    <h5 className="svm-pillar-title">Fair &amp; Transparent Process</h5>
-                    <p className="svm-pillar-sub">Equal opportunity for every child.</p>
-                  </div>
-                </div>
-
-                {/* Pillar 3 */}
-                <div className="svm-pillar-item">
-                  <div className="svm-pillar-icon-badge">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#78111B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="18" y1="20" x2="18" y2="10"></line>
-                      <line x1="12" y1="20" x2="12" y2="4"></line>
-                      <line x1="6" y1="20" x2="6" y2="14"></line>
-                      <path d="M4 4l6 6 4-4 6 6"></path>
-                    </svg>
-                  </div>
-                  <div className="svm-pillar-text">
-                    <h5 className="svm-pillar-title">Strong Academic Foundation</h5>
-                    <p className="svm-pillar-sub">Preparing for a brighter future.</p>
-                  </div>
-                </div>
-
               </div>
             </div>
 
@@ -688,6 +618,20 @@ const AdmissionPage = () => {
                   <div className="svm-perk-text">
                     <h4 className="svm-perk-title">Quick Response</h4>
                     <p className="svm-perk-desc">We&apos;ll get back to you as soon as possible.</p>
+                  </div>
+                </div>
+
+                {/* Perk 4 */}
+                <div className="svm-perk-item">
+                  <div className="svm-perk-icon-circle">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#78111B" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                  </div>
+                  <div className="svm-perk-text">
+                    <h4 className="svm-perk-title">Transparent Process</h4>
+                    <p className="svm-perk-desc">Clear and fair admission criteria with complete guidance at every step.</p>
                   </div>
                 </div>
               </div>

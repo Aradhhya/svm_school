@@ -1,16 +1,16 @@
 import './FacilitiesPage.css';
-import smartClassMain from '../../assets/smart-class-main.png';
-import smartClassTablet from '../../assets/smart-class-tablet.png';
-import roboticsMain from '../../assets/ai-robotics-main.jpg';
+import smartClassMain from '../../assets/facility-smart-classroom.jpg';
+import smartClassTablet from '../../assets/smart-class-tablet.jpg';
+import roboticsMain from '../../assets/facility-ai-robotics.jpg';
 import roboticsStudent from '../../assets/ai-robotics-student.jpg';
 import roboticsCar from '../../assets/ai-robotics-car.jpg';
-import scienceMain from '../../assets/science-lab-main.jpg';
+import scienceMain from '../../assets/facility-science-lab.jpg';
 import scienceBeakers from '../../assets/science-lab-beakers.jpg';
 import scienceStudent from '../../assets/science-lab-student.jpg';
-import computerLabImg from '../../assets/computer-lab.jpg';
-import libraryImg from '../../assets/library.jpg';
+import computerLabImg from '../../assets/facility-computer-lab.jpg';
+import libraryImg from '../../assets/facility-library.jpg';
 import sportsFootballImg from '../../assets/sports-football.jpg';
-import medicalSupportImg from '../../assets/medical-support.jpg';
+import medicalSupportImg from '../../assets/facility-medical-care.jpg';
 
 const facilitiesList = [
   {
@@ -709,14 +709,7 @@ const FacilitiesPage = () => {
                   />
                 </div>
 
-                {/* Overlapping Orange Icon Box (Bottom-Left) */}
-                <div className="svm-dual-icon-box svm-icon-box-orange">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#4A0E17" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                </div>
+               
               </div>
 
               {/* Card Content Area */}
@@ -822,12 +815,7 @@ const FacilitiesPage = () => {
                 </div>
 
                 {/* Overlapping White Icon Box (Top-Right) */}
-                <div className="svm-dual-icon-box svm-icon-box-white">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#7F0A1A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                  </svg>
-                </div>
+          
               </div>
 
               {/* Card Content Area */}
@@ -941,23 +929,8 @@ const FacilitiesPage = () => {
 
                 {/* Attached Maroon Banner on Right Side of Image */}
                 <div className="svm-sports-maroon-banner">
-                  <div className="svm-sports-icon-white">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#7F0A1A" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="17" cy="4" r="2"></circle>
-                      <path d="m15 7-3 4-4-2-4 4"></path>
-                      <path d="m13 15-2 6"></path>
-                      <path d="m17 11 3 3-2 5"></path>
-                    </svg>
-                  </div>
-                  <div className="svm-sports-banner-text">
-                    <span className="svm-sports-quote">“Play</span>
-                    <span className="svm-sports-quote">Learn</span>
-                    <span className="svm-sports-quote">Grow</span>
-                    <span className="svm-sports-quote">Together.”</span>
-                    <svg className="svm-sports-underline" viewBox="0 0 54 8" fill="none">
-                      <path d="M2 5 C16 2, 38 7, 52 3" stroke="#F89E3A" strokeWidth="2.4" strokeLinecap="round" />
-                    </svg>
-                  </div>
+                  
+                  
                 </div>
               </div>
 

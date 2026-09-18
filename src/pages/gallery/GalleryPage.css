@@ -328,23 +328,9 @@
   transform: scale(1.06);
 }
 
-/* Hover Gradient & Text */
-.svm-card-hover-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(104, 8, 21, 0.92) 0%, rgba(35, 15, 10, 0.3) 50%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.28s ease;
-  padding: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.svm-gallery-card:hover .svm-card-hover-overlay,
-.svm-gallery-card:focus-visible .svm-card-hover-overlay {
-  opacity: 1;
-}
+
+
 
 .svm-card-badge {
   align-self: flex-start;
@@ -425,11 +411,7 @@
   box-shadow: 0 3px 12px rgba(60, 35, 15, 0.05);
 }
 
-.svm-gallery-load-more-btn.svm-btn-outline:hover {
-  border-color: #C58A3A;
-  background-color: #FFFDF9;
-  box-shadow: 0 6px 18px rgba(60, 35, 15, 0.1);
-}
+
 
 /* Empty State */
 .svm-gallery-empty {
@@ -489,10 +471,7 @@
   transition: all 0.2s ease;
 }
 
-.svm-lightbox-close:hover {
-  background: #680815;
-  transform: scale(1.08);
-}
+
 
 .svm-lightbox-nav {
   position: absolute;
@@ -514,10 +493,6 @@
   transition: all 0.2s ease;
 }
 
-.svm-lightbox-nav:hover {
-  background: #680815;
-  transform: translateY(-50%) scale(1.1);
-}
 
 .svm-lightbox-prev {
   left: 14px;
